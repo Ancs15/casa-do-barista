@@ -11,7 +11,7 @@
       <div class="site cardEventos slideEventos wow animate__animated animate__fadeInUp">
 
         <article>
-          <img src="{{asset('barista/assets/evento_1.png')}}" alt="evento">
+          <img src="{{asset('barista/img/evento_1.png')}}" alt="evento">
           <h4>
             Degustação orientada
           </h4>
@@ -33,7 +33,7 @@
 
          <div class="linha-grao">
           <hr>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="grão"> </img>
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="grão"> </img>
           <hr>
 
          </div>
@@ -44,7 +44,7 @@
        </article>
 
        <article>
-          <img src="{{asset('barista/assets/evento_2.png')}}" alt="evento">
+          <img src="{{asset('barista/img/evento_2.png')}}" alt="evento">
           <h4>
             Degustação orientada
           </h4>
@@ -66,7 +66,7 @@
 
          <div class="linha-grao">
           <hr>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="grão"> </img>
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="grão"> </img>
           <hr>
 
          </div>
@@ -77,7 +77,7 @@
        </article>
 
        <article>
-          <img src="{{asset('barista/assets/evento_3.png')}}" alt="evento">
+          <img src="{{asset('barista/img/evento_3.png')}}" alt="evento">
           <h4>
             Degustação orientada
           </h4>
@@ -99,7 +99,7 @@
 
          <div class="linha-grao">
           <hr>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="grão"> </img>
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="grão"> </img>
           <hr>
 
          </div>
@@ -110,7 +110,7 @@
        </article>
 
        <article>
-          <img src="{{asset('barista/assets/evento_4.png')}}" alt="evento">
+          <img src="{{asset('barista/img/evento_4.png')}}" alt="evento">
           <h4>
             Degustação orientada
           </h4>
@@ -132,7 +132,7 @@
 
          <div class="linha-grao">
           <hr>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="grão"> </img>
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="grão"> </img>
           <hr>
 
          </div>
@@ -143,7 +143,7 @@
        </article>
 
         <article>
-          <img src="{{asset('barista/assets/evento_1.png')}}" alt="evento">
+          <img src="{{asset('barista/img/evento_1.png')}}" alt="evento">
           <h4>
             Degustação orientada
           </h4>
@@ -165,7 +165,7 @@
 
          <div class="linha-grao">
           <hr>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="grão"> </img>
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="grão"> </img>
           <hr>
 
          </div>
@@ -176,7 +176,7 @@
        </article>
 
        <article>
-          <img src="{{asset('barista/assets/evento_2.png')}}" alt="evento">
+          <img src="{{asset('barista/img/evento_2.png')}}" alt="evento">
           <h4>
             Degustação orientada
           </h4>
@@ -198,7 +198,7 @@
 
          <div class="linha-grao">
           <hr>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="grão"> </img>
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="grão"> </img>
           <hr>
 
          </div>
@@ -209,7 +209,7 @@
        </article>
 
        <article>
-          <img src="{{asset('barista/assets/evento_3.png')}}" alt="evento">
+          <img src="{{asset('barista/img/evento_3.png')}}" alt="evento">
           <h4>
             Degustação orientada
           </h4>
@@ -231,7 +231,7 @@
 
          <div class="linha-grao">
           <hr>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="grão"> </img>
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="grão"> </img>
           <hr>
 
          </div>
@@ -242,7 +242,7 @@
        </article>
 
        <article>
-          <img src="{{asset('barista/assets/evento_4.png')}}" alt="evento">
+          <img src="{{asset('barista/img/evento_4.png')}}" alt="evento">
           <h4>
             Degustação orientada
           </h4>
@@ -264,7 +264,7 @@
 
          <div class="linha-grao">
           <hr>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="grão"> </img>
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="grão"> </img>
           <hr>
 
          </div>

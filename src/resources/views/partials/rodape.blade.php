@@ -21,7 +21,7 @@
             <h3>Faça sua reserva</h3>
             <div class="linha-box">
               <hr>
-              <img src="{{ asset('barista/assets/coffee.svg')}}" alt="grão café">
+              <img src="{{ asset('barista/img/coffee.svg')}}" alt="grão café">
               <hr>
             </div>
             <ul>
@@ -47,7 +47,7 @@
               <label for="email">Inscreva-se</label>
               <input type="email" name="email" id="email" placeholder="informe seu email">
               <button type="submit" aria-label="Enviar">
-                <img src="{{asset('barista/assets/arrow.svg')}}" alt="Botão Enviar">
+                <img src="{{asset('barista/img/arrow.svg')}}" alt="Botão Enviar">
               </button>
             </form>
           </div>
@@ -62,13 +62,13 @@
 
           <ul class="margenzinha rede-social">
 
-      <li><a href="#" target="_blank"><img src="{{asset('barista/assets/facebook-24.png')}}" alt="Logo facebook"></a></li>
+      <li><a href="#" target="_blank"><img src="{{asset('barista/img/facebook-24.png')}}" alt="Logo facebook"></a></li>
 
-      <li><a href="#" target="_blank"><img src="{{asset('barista/assets/instagram-24.png')}}" alt="Logo instagram"></a></li>
+      <li><a href="#" target="_blank"><img src="{{asset('barista/img/instagram-24.png')}}" alt="Logo instagram"></a></li>
 
-      <li><a href="#" target="_blank"><img src="{{asset('barista/assets/linkedin-24.png')}}" alt="Logo linkedin"></a></li>
+      <li><a href="#" target="_blank"><img src="{{asset('barista/img/linkedin-24.png')}}" alt="Logo linkedin"></a></li>
       
-      <li><a href="https://wa.me/5511999999999" target="_blank"><img src="{{asset('barista/assets/whatsapp-24.png')}}" alt="Logo whatsapp"></a></li>
+      <li><a href="https://wa.me/5511999999999" target="_blank"><img src="{{asset('barista/img/whatsapp-24.png')}}" alt="Logo whatsapp"></a></li>
 
     </ul>
 

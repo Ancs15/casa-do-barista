@@ -12,7 +12,7 @@
         <!-- Primeiro destaque -->
 
         <article>
-          <img src="{{asset('barista/assets/close-up-cappuccino-table.png')}}" alt="Casa do Barista - Imagem do serviço em destaque">
+          <img src="{{asset('barista/img/close-up-cappuccino-table.png')}}" alt="Casa do Barista - Imagem do serviço em destaque">
           <h5>
             Espresso artesanal
           </h5>
@@ -26,7 +26,7 @@
          
         <article>
 
-          <img src="{{asset('barista/assets/blend-cocktls-glasses-with-ice-cubes-orange-slices.png')}}" alt="Casa do Barista - Imagem do serviço em destaque">
+          <img src="{{asset('barista/img/blend-cocktls-glasses-with-ice-cubes-orange-slices.png')}}" alt="Casa do Barista - Imagem do serviço em destaque">
           <h5>
             Coado tradicional
           </h5>
@@ -39,7 +39,7 @@
 
         <!-- Terceiro destaque -->
         <article>
-          <img src="{{asset('barista/assets/cafe-gourmet.png')}}" alt="Casa do Barista - Imagem do serviço em destaque">
+          <img src="{{asset('barista/img/cafe-gourmet.png')}}" alt="Casa do Barista - Imagem do serviço em destaque">
           <h5>
             Prensa francesa
           </h5>

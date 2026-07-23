@@ -63,13 +63,13 @@
                 <h3>Siga-nos</h3>
                 <ul class="rede-social">
 
-                  <li><a href="#" target="_blank"><img src="{{asset('barista/assets/facebook-24.png')}}" alt="Logo facebook"></a></li>
+                  <li><a href="#" target="_blank"><img src="{{asset('barista/img/facebook-24.png')}}" alt="Logo facebook"></a></li>
 
-                  <li><a href="#" target="_blank"><img src="{{asset('barista/assets/instagram-24.png')}}" alt="Logo instagram"></a></li>
+                  <li><a href="#" target="_blank"><img src="{{asset('barista/img/instagram-24.png')}}" alt="Logo instagram"></a></li>
 
-                  <li><a href="#" target="_blank"><img src="{{asset('barista/assets/linkedin-24.png')}}" alt="Logo linkedin"></a></li>
+                  <li><a href="#" target="_blank"><img src="{{asset('barista/img/linkedin-24.png')}}" alt="Logo linkedin"></a></li>
 
-                  <li><a href="https://wa.me/5511999999999" target="_blank"><img src="{{asset('barista/assets/whatsapp-24.png')}}"
+                  <li><a href="https://wa.me/5511999999999" target="_blank"><img src="{{asset('barista/img/whatsapp-24.png')}}"
                         alt="Logo whatsapp"></a></li>
 
                 </ul>

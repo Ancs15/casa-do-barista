@@ -9,39 +9,39 @@
         </header>
         <div class="site-card cardgaleria slideGaleria wow animate__animated animate__fadeInUp">
           <article>
-            <img src="{{asset('barista/assets/galeria_1.png')}}" alt="foto">
+            <img src="{{asset('barista/img/galeria_1.png')}}" alt="foto">
           </article>
 
            <article>
-            <img src="{{asset('barista/assets/galeria_2.png')}}" alt="foto">
+            <img src="{{asset('barista/img/galeria_2.png')}}" alt="foto">
           </article>
 
            <article>
-            <img src="{{asset('barista/assets/galeria_3.png')}}" alt="foto">
+            <img src="{{asset('barista/img/galeria_3.png')}}" alt="foto">
           </article>
 
            <article>
-            <img src="{{asset('barista/assets/galeria_4.png')}}" alt="foto">
+            <img src="{{asset('barista/img/galeria_4.png')}}" alt="foto">
           </article>
 
            <article>
-            <img src="{{asset('barista/assets/galeria_5.png')}}" alt="foto">
+            <img src="{{asset('barista/img/galeria_5.png')}}" alt="foto">
           </article>
 
            <article>
-            <img src="{{asset('barista/assets/galeria_6.png')}}" alt="foto">
+            <img src="{{asset('barista/img/galeria_6.png')}}" alt="foto">
           </article>
           
            <article>
-            <img src="{{asset('barista/assets/galeria_1.png')}}" alt="foto">
+            <img src="{{asset('barista/img/galeria_1.png')}}" alt="foto">
           </article>
 
            <article>
-            <img src="{{asset('barista/assets/galeria_2.png')}}" alt="foto">
+            <img src="{{asset('barista/img/galeria_2.png')}}" alt="foto">
           </article>
 
            <article>
-            <img src="{{asset('barista/assets/galeria_3.png')}}" alt="foto">
+            <img src="{{asset('barista/img/galeria_3.png')}}" alt="foto">
           </article>
 
         

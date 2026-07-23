@@ -23,15 +23,15 @@
        <div class="login">
 
          <a href="#">
-           <img src="assets/login.png" alt="Login Casa do Barista">
+           <img src="{{asset('barista/img/login.png')}}" alt="Login Casa do Barista">
          </a>
        </div>
 
        <ul class="rede-social">
 
-         <li><a href="#" target="_blank"><img src="assets/facebook-24.png" alt="Logo facebook"></a></li>
-         <li><a href="#" target="_blank"><img src="assets/instagram-24.png" alt="Logo instagram"></a></li>
-         <li><a href="https://wa.me/5511999999999" target="_blank"><img src="assets/whatsapp-24.png" alt="Logo whatsapp"></a></li>
+         <li><a href="#" target="_blank"><img src="{{asset('barista/img/facebook-24.png')}}" alt="Logo facebook"></a></li>
+         <li><a href="#" target="_blank"><img src="{{asset('barista/img/instagram-24.png')}}" alt="Logo instagram"></a></li>
+         <li><a href="https://wa.me/5511999999999" target="_blank"><img src="{{asset('barista/img/whatsapp-24.png')}}" alt="Logo whatsapp"></a></li>
 
        </ul>
 

@@ -28,7 +28,7 @@
           <h4>
             Gastronomia afetiva e autoral
           </h4>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="Casa do Barista - Gastronomia afetiva e autoral">
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="Casa do Barista - Gastronomia afetiva e autoral">
           <p>
             Receitas feitas para harmonizar com os cafés, com foco em ingredientes frescos e artesanais.
 
@@ -42,7 +42,7 @@
           <h4>
             Ambiente pensado para todos os momentos
           </h4>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="Casa do Barista - Ambiente pensado para todos os momentos">
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="Casa do Barista - Ambiente pensado para todos os momentos">
           <p>
             Encontros, estudos, trabalho, leitura ou simplesmente relaxar.
           </p>
@@ -55,7 +55,7 @@
           <h4>
             Experiências, workshops e degustações
           </h4>
-          <img src="{{asset('barista/assets/coffee.svg')}}" alt="Casa do Barista - Experiências, workshops e degustações">
+          <img src="{{asset('barista/img/coffee.svg')}}" alt="Casa do Barista - Experiências, workshops e degustações">
           <p>
             Aprenda mais sobre café com curadoria do nosso barista.
           </p>

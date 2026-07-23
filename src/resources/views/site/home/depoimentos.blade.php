@@ -9,15 +9,15 @@
           <article>
 
             <ul>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
             </ul>
     
               
-              <img src="{{asset('barista/assets/usuario.png')}}" alt="foto do usuario">
+              <img src="{{asset('barista/img/usuario.png')}}" alt="foto do usuario">
     
               <p>
                 “Foi muito mais do que tomar um café, foi uma experiencia. o sabor do café artesanal é incrivel, feito com com cuidado e carinho, e o atendimento acolhedor faz a gente se sentir em casa, com certeza, o melhor café que já provei.”
@@ -46,14 +46,14 @@
            <article>
 
             <ul>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
             </ul>
     
               
-              <img src="{{asset('assets/usuario_2.png')}}" alt="foto do usuario">
+              <img src="{{asset('barista/img/usuario_2.png')}}" alt="foto do usuario">
     
               <p>
                 “Um lugar aconchegante para ir em um final de semana, porém não há muitos assentos”
@@ -81,13 +81,13 @@
            <article>
 
             <ul>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
             </ul>
     
               
-              <img src="{{asset('barista/assets/usuario_3.png')}}" alt="foto do usuario">
+              <img src="{{asset('barista/img/usuario_3.png')}}" alt="foto do usuario">
     
               <p>
                 “Um ótimo estabelecimento.”
@@ -115,11 +115,11 @@
            <article>
 
             <ul>
-              <li><img src="{{asset('barista/assets/estrela.png')}}" alt="estrela"></li>
+              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
             </ul>
     
               
-              <img src="{{asset('barista/assets/usuario_4.png')}}" alt="foto do usuario">
+              <img src="{{asset('barista/img/usuario_4.png')}}" alt="foto do usuario">
     
               <p>
                 “Um Local aconchegante.”
