@@ -18,7 +18,7 @@
     <!-- destaque fim -->
 
     <!-- Cardápio inicio -->
-    @include('site.home.cardapio')
+    @include('site.home.sec-cardapio')
     <!-- Cardápio fim -->
 
     <!-- Inicio equipe -->
@@ -26,7 +26,7 @@
     <!-- equipe fim -->
 
     <!-- Eventos inicio -->
-    @include('site.home.eventos')
+    @include('site.home.sec-eventos')
     <!-- eventos fim -->
 
     <!-- Galeria inicio -->

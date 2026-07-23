@@ -10,13 +10,13 @@
        <ul>
          <li><a class="menu-ativo" href="{{route('home')}}">Home</a></li>
 
-         <li><a class="" href="{{route('home')}}">Sobre</a></li>
+         <li><a class="" href="{{route('sobre')}}">Sobre</a></li>
 
-         <li><a class="" href="{{route('home')}}">Cardápio</a></li>
+         <li><a class="" href="{{route('cardapio')}}">Cardápio</a></li>
 
-         <li><a class="" href="{{route('home')}}">Eventos</a></li>
+         <li><a class="" href="{{route('eventos')}}">Eventos</a></li>
 
-         <li><a class="" href="{{route('home')}}">Contato</a></li>
+         <li><a class="" href="{{route('contato')}}">Contato</a></li>
 
        </ul>
 

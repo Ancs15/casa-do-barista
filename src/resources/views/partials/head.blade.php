@@ -25,35 +25,39 @@ Cada xícara é uma narrativa do produtor ao barista, do barista ao cliente. Aqu
 
   <!-- Links dos ICONS para FAVICOM -->
 
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/icon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/icon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/icon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/icon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/icon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/icon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/icon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/icon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
-  <link rel="manifest" href="assets/icon/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{asset('barista/assets/icon/apple-icon-57x57.png')}}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{asset('barista/assets/icon/apple-icon-60x60.png')}}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{asset('barista/assets/icon/apple-icon-72x72.png')}}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{asset('barista/assets/icon/apple-icon-76x76.png')}}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{asset('barista/assets/icon/apple-icon-114x114.png')}}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{asset('barista/assets/icon/apple-icon-120x120.png')}}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{asset('barista/assets/icon/apple-icon-144x144.png')}}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{asset('barista/assets/icon/apple-icon-152x152.png')}}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{asset('barista/assets/icon/apple-icon-180x180.png')}}">
+  <link rel="icon" type="image/png')}}" sizes="192x192" href="{{asset('barista/assets/icon/android-icon-192x192.png')}}">
+  <link rel="icon" type="image/png')}}" sizes="32x32" href="{{asset('barista/assets/icon/favicon-32x32.png')}}">
+  <link rel="icon" type="image/png')}}" sizes="96x96" href="{{asset('barista/assets/icon/favicon-96x96.png')}}">
+  <link rel="icon" type="image/png')}}" sizes="16x16" href="{{asset('barista/assets/icon/favicon-16x16.png')}}">
+  <link rel="manifest" href="{{asset('barista/assets/icon/manifest.json">
   <meta name="msapplication-TileColor" content="#8b5e3c">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png')}}">
   <meta name="theme-color" content="#8b5e3c">
 
   <title>CASA DO BARISTA</title>
   <!-- Reset limpa os estilos -->
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="{{asset('barista/css/reset.css')}}">
 
   <!-- Slick -->
 
-  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="{{asset('barista/css/slick.css')}}">
 
-  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="{{asset('barista/css/slick-theme.css')}}">
   <!-- Animação - Animate CSS -->
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    href="{{asset('barista/https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')}}" />
+
+  <!-- Estilos Pessoais -->
+  <link rel="stylesheet" href="{{asset('barista/css/style.css')}}">  
+  <link rel="stylesheet" href="{{asset('barista/css/responsive.css')}}">
 </head>
