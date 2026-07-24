@@ -1,159 +1,53 @@
-<section class="depoimentos">
-        <header class="parallax-padrao">
-          <h2>
-            Depoimentos
-          </h2>
-
-        </header>
-        <div class="site cardDepoimentos wow animate__animated animate__fadeInUp">
-          <article>
-
-            <ul>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-            </ul>
-    
-              
-              <img src="{{asset('barista/img/usuario.png')}}" alt="foto do usuario">
-    
-              <p>
-                “Foi muito mais do que tomar um café, foi uma experiencia. o sabor do café artesanal é incrivel, feito com com cuidado e carinho, e o atendimento acolhedor faz a gente se sentir em casa, com certeza, o melhor café que já provei.”
-              </p>
-            
-            
-                 <h4>
-                  Carmem Lucia da Silva Soares
-                </h4>
-                
-                <div class="registroDepo">
-                  
-                  <h5>
-                    12/04/2025
-                  </h5>
-  
-                  <h5>
-                    Espresso artesanal
-                  </h5>
-
-                </div>
-    
-           
-          </article>
-
-           <article>
-
-            <ul>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-            </ul>
-    
-              
-              <img src="{{asset('barista/img/usuario_2.png')}}" alt="foto do usuario">
-    
-              <p>
-                “Um lugar aconchegante para ir em um final de semana, porém não há muitos assentos”
-              </p>
-            
-            
-                 <h4>
-                  Silvia ferreira dos santos
-                </h4>
-                <div class="registroDepo">
-                  
-                  <h5>
-                    15/06/2025
-                  </h5>
-  
-                  <h5>
-                    Café tradicional
-                  </h5>
-                  
-                </div>
-    
-           
-          </article>
-
-           <article>
-
-            <ul>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-            </ul>
-    
-              
-              <img src="{{asset('barista/img/usuario_3.png')}}" alt="foto do usuario">
-    
-              <p>
-                “Um ótimo estabelecimento.”
-              </p>
-            
-            
-                 <h4>
-                 Fabrício souza da rocha
-                </h4>
-                <div class="registroDepo">
-                  
-                  <h5>
-                   23/09/2025
-                  </h5>
-  
-                  <h5>
-                    Café gourmet
-                  </h5>
-                  
-                </div>
-    
-           
-          </article>
-
-           <article>
-
-            <ul>
-              <li><img src="{{asset('barista/img/estrela.png')}}" alt="estrela"></li>
-            </ul>
-    
-              
-              <img src="{{asset('barista/img/usuario_4.png')}}" alt="foto do usuario">
-    
-              <p>
-                “Um Local aconchegante.”
-              </p>
-            
-            
-                 <h4>
-                  Paulo Fernando cruz
-                </h4>
-                <div class="registroDepo">
-                  
-                  <h5>
-                    04/11/2025
-                  </h5>
-  
-                  <h5>
-                    Cappuccino
-                  </h5>
-                  
-                </div>
-    
-           
-          </article>
-
- 
-          
-        </div>
-        
-
-
-
-     
-  
-
-
-
-</section>
+    <section class="depoimentos wow animate__animated animate__fadeInUp">
+      <div class="parallax-padrao">
+        <h3>Depoimentos</h3>
+        <h2>Nada nos inspira mais do que ouvir a experiência de quem passa por aqui</h2>
+      </div>
+      <div class="site dep-cards slideDepoimentos">
+        <article>
+          <div class="estrelas">
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">          
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">          
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">          
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">
+          </div>
+          <p>"Foi muito mais do que tomar um café: foi uma experiência. o sabor do café artesanal é incrível, feito com amor e carinho, e o atendimento acolhedor faz a gente se sentir em casa. Com certeza, o melhor café que já provei."</p>
+          <img src="{{ asset('barista/img/foto-de-perfil.png') }}" alt="Usuária da Casa do Barista">
+          <h5>Carmem Lúcia da Silva Soares</h5>
+          <div class="data-local">
+            <h4>Data: 04 / 02 / 2026<span>Cliente local</span></h4>
+          </div>
+        </article>
+        <article>
+          <div class="estrelas">
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">          
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">          
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">          
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">
+          </div>
+          <p>"Um refúgio no meio da cidade! O espresso estava impecável, com a acidez no ponto certo, mas o que realmente me ganhou foi o bolo de laranja com calda de alecrim. O ambiente é silencioso e perfeito para quem, como eu, gosta de ler ou trabalhar um pouco enquanto toma um bom grão special. Atendimento gentil e trilha sonora de muito bom gosto. Voltarei com certeza!"</p>
+          <img src="{{ asset('barista/img/foto-de-perfil2.jpg') }}" alt="Usuária da Casa do Barista">
+          <h5>Beatriz Cavalcante Moraes</h5>
+          <div class="data-local">
+            <h4>Data: 15 / 01 / 2026<span>Cliente local</span></h4>
+          </div>
+        </article>
+        <article>
+          <div class="estrelas">
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">          
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">          
+            <img src="{{ asset('barista/img/estrela.png') }}" alt="Estrelas de avaliação - Casa do Barista">          
+            <img src="{{ asset('barista/img/estrela-vazia.png') }}" alt="Estrelas de avaliação - Casa do Barista">
+          </div>
+          <p>"O lugar é super charmoso e rende fotos incríveis para o Instagram! O Cappuccino com canela estava uma delícia e a playlist de jazz ao fundo cria um clima muito gostoso para encontrar as amigas. Só não dou 5 estrelas porque a vitrine de doces já estava quase vazia quando cheguei à tarde, mas o brownie que consegui pegar estava divino. Com certeza vou voltar para testar o brunch!"</p>
+          <img src="{{ asset('barista/img/foto-de-perfil3.jpg') }}" alt="Usuária da Casa do Barista">
+          <h5>Larissa Mendes Rocha</h5>
+          <div class="data-local">
+            <h4>Data: 22 / 10 / 2025<span>Cliente local</span></h4>
+          </div>
+        </article>                
+      </div>
+    </section>

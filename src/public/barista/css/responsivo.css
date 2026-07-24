@@ -1,0 +1,599 @@
+@media (max-width: 1200px) {
+
+    .menu{
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 20px;
+    }
+
+    .menu ul{
+        order: 1;
+    }
+
+    .menu ul li a{
+        font-size: 18px;
+    }
+
+    .bem-vindo article {
+        width: 350px;
+    }   
+
+    .des-cards article{
+        width: 31%;
+    }
+
+    .cardapio .car-cards {
+        justify-content: space-around;
+    }
+
+    .btn-cardapio {
+        padding: 0;
+    }
+
+    .eventos .slick-prev,
+    .eventos .slick-next{
+        top: 627px;
+    }
+    .eventos .slick-prev,
+    .depoimentos .slick-prev {
+        left: 40px;
+    }
+
+    .eventos .slick-next,
+    .depoimentos .slick-next {
+        right: 80px;
+    }
+
+        /* Início Formulário Contato */
+
+    .contato > div{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-form form::before{
+        text-align: center;
+    }
+
+    .contato-form form > div:last-child{
+        margin-bottom: 50px;
+    }
+
+    /* Fim Formulário Contato */
+
+}
+
+@media not all and (max-width: 768px) {
+    .abrir-menu,
+    .fechar-menu{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .topo h1{
+        margin: 10px;
+    }
+
+    /* MENU */
+
+    .menu{
+        background-color: rgba(181, 106, 52, 0.95);
+        height: 100%;
+        position: fixed;
+        max-width: 380px;
+        width: 45%;
+        z-index: 10;
+        top: 0;
+        right: -400px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        transition: right 1s ease-in-out;
+        box-shadow: -3px 0 5px var(rgba(69, 40, 20, 0.5));
+    }
+
+    .menu-ativo{
+        color: var(--cor-texto);
+    }
+
+    .menu-mobile .menu{
+        right: 0;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+   .menu ul li a:hover {
+    color: var(--cor-texto);
+}
+
+    .abrir-menu{
+        background-image: url(../img/menu.png);
+        background-size: cover;
+        padding: 18px;
+        border: 0;
+        display: block;
+        margin-right: 20px;
+    }
+
+    .fechar-menu{
+        background-image: url(../img/fechar.png);
+        background-size: cover;
+        padding: 18px;
+        border: 0;
+        display: block;
+        margin-right: 20px;
+        align-self: start;
+    }
+
+    .menu .login{
+        margin: 0 25px;
+    }
+
+    .menu .rede-social{
+        flex-direction: row;
+        gap: 10px;
+        margin: 0 25px;
+    }
+
+    .menu .rede-social li a{
+        margin: 0;
+    }
+
+    /* FIM - MENU */
+
+    .banner {
+        display: none;
+    }
+
+    /* BEM-VINDO */
+
+    .bem-vindo header p {
+        width: auto;
+    }
+
+    .bem-vindo div div{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .bem-vindo article {
+        width: 95%;
+    }
+    
+
+    /* FIM - BEM-VINDO */
+
+    .destaque .des-cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .des-cards article{
+        width: 95%;
+        height: auto;
+    }
+
+    .cardapio .car-cards {
+        justify-content: space-evenly;
+    }
+
+    .card-flip{
+        width: 46%;
+    }
+
+    .btn-cardapio{
+        margin: 40px 0;
+        justify-content: center;
+    }
+
+    .equ-cards{
+        align-items: center;
+        gap: 20px;
+    }
+
+    .equ-cards article{
+        width: 43%;
+        height: auto;       
+    }
+
+    .eventos .slick-prev, .eventos .slick-next {
+        top: 840px;
+    }
+
+    .depoimentos .parallax-padrao h2 {
+        font-size: 28px;
+        -webkit-text-stroke: .5px var(--cor-fundo-clara);
+    }
+
+    .depoimentos .dep-cards p {
+        margin-bottom: 70px;
+        width: 95%;
+        font-size: 20px;
+    }
+
+    .depoimentos .slick-prev, .depoimentos .slick-next {
+        top: 243px;
+    }
+
+    .depoimentos .slick-prev:before, .depoimentos .slick-next:before {
+        font-size: 40px;
+        color: var(--cor-principal);
+    }
+
+    .depoimentos .data-local {
+        font-size: 24px;
+    }
+
+    .depoimentos .dep-cards span {
+        margin-left: 458px;
+    }
+
+    /* Início Formulário Contato */
+
+    .contato > div{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-txt > div{
+        flex-direction: column;
+    }
+
+    .contato-txt > div > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-txt,
+    .contato-form{
+        width: 76%;
+    }
+
+    .contato-form{
+        margin-right: 24px;
+    }
+
+    .contato-form form::before{
+        text-align: center;        
+    }
+    
+    .contato-form form > div:nth-child(3), .contato-form form > div:last-child{
+        margin-bottom: 50px;
+    }
+
+    /* Fim Formulário Contato */
+
+    .coluna-end{
+        margin-top: 50px;
+    }
+
+    .rodape .rodape-grid {
+        flex-direction: column;
+    }
+
+    .coluna-reserve{
+        width: 98%;
+    }
+
+    .box-reserva {
+        width: 55%;
+        top: 10%;
+        left: 20%;
+        padding: 15px;
+    }
+
+    .box-email p{
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+
+    .box-email form{
+        width: 90%;
+    }
+
+    .box-email form label{
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    .box-email form button{
+        width: 44px;
+    }
+
+    .box-email form button img{
+        width: 20px;
+        height: 16px;
+        display: block;
+    }
+
+    .coluna-contato .rede-social {
+        margin: 20px 0;
+    }
+
+
+
+
+
+}
+
+
+@media not all and (max-width: 380px) {
+
+}
+
+/*FIM - not all and (max-width: 380px) */
+
+@media (max-width: 380px) {
+
+    .topo h1{
+        margin: 10px;
+    }
+
+    /* MENU */
+
+    .menu{
+        background-color: rgba(181, 106, 52, 0.95);
+        height: 100%;
+        position: fixed;
+        max-width: 230px;
+        width: 45%;
+        margin: 0;
+        z-index: 10;
+        top: 0;
+        right: -200px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        transition: right .5s ease-in-out;
+        box-shadow: -3px 0 5px var(rgba(69, 40, 20, 0.5));
+    }
+
+    .menu ul li .menu-ativo{
+        color: var(--cor-texto);
+    }
+
+    .menu-mobile .menu{
+        right: 0;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+   .menu ul li a:hover {
+    color: var(--cor-texto);
+}
+
+    .abrir-menu{
+        background-image: url(../img/menu.png);
+        background-size: cover;
+        padding: 18px;
+        border: 0;
+        display: block;
+        margin-right: 20px;
+    }
+
+    .fechar-menu{
+        background-image: url(../img/fechar.png);
+        background-size: cover;
+        padding: 18px;
+        border: 0;
+        display: block;
+        margin-right: 20px;
+        align-self: start;
+    }
+
+    .menu .rede-social{
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .menu .rede-social li a{
+        margin: 0;
+    }
+
+    /* FIM - MENU */
+
+    .banner {
+        display: none;
+    }
+
+    .rede-login{
+        flex-direction: column;
+    }
+    
+    /* BEM-VINDO */
+
+    .bem-vindo header p {
+        width: auto;
+    }
+
+    .bem-vindo div div{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .bem-vindo article {
+        width: 95%px;
+    }
+    
+
+    /* FIM - BEM-VINDO */
+
+    .menu .login{
+        margin: 25px 0;
+    }
+
+    .destaque .des-cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .des-cards article{
+        width: 95%;
+        height: auto;
+    }
+
+    .card-flip{
+        width: 95%;
+    }
+
+    .btn-cardapio{
+        margin: 40px 0;
+        justify-content: center;
+    }
+
+    .equ-cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .equ-cards article{
+        width: 85%;
+        height: auto;       
+    }
+
+    .depoimentos .parallax-padrao h2 {
+        font-size: 28px;
+        -webkit-text-stroke: .5px var(--cor-fundo-clara);
+    }
+
+    .depoimentos .dep-cards p {
+        margin-bottom: 70px;
+        width: 95%;
+        font-size: 20px;
+    }
+
+    .depoimentos .slick-prev:before, .depoimentos .slick-next:before {
+        font-size: 40px;
+        color: var(--cor-principal);
+    }
+
+    .depoimentos .data-local {
+        font-size: 24px;
+    }
+
+    .depoimentos .dep-cards span {
+        margin-left: 85px;
+    }
+
+    /* Início Formulário Contato */
+
+    .contato > div{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-txt > div{
+        flex-direction: column;
+    }
+
+    .contato-txt > div > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-txt,
+    .contato-form{
+        width: 76%;
+    }
+
+    .contato-form{
+        margin-right: 24px;
+    }
+    
+    .contato-form form::before{
+        font-size: 40px;
+    }
+
+    .contato-form form > div:nth-child(3),
+    .contato-form form > div:last-child{
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .contato-form form > div:nth-child(3) > div,
+    .contato-form button{
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contato-form textarea{
+        min-height: 260px;
+    }
+
+    /* Fim Formulário Contato */
+
+    .coluna-end{
+        margin-top: 50px;
+    }
+
+    .rodape .rodape-grid {
+        flex-direction: column;
+    }
+
+    .coluna-reserve{
+        width: 98%;
+    }
+
+    .box-reserva {
+        width: 90%;
+        top: 50%;
+        left: 0;
+        padding: 15px;
+    }
+
+    .box-email p{
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+
+    .box-email form{
+        width: 90%;
+    }
+
+    .box-email form label{
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    .box-email form button{
+        width: 44px;
+    }
+
+    .box-email form button img{
+        width: 20px;
+        height: 16px;
+        display: block;
+    }
+
+    .coluna-contato .rede-social {
+        margin: 20px 0;
+    }
+
+
+
+
+}

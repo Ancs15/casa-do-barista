@@ -1,56 +1,23 @@
-<section class="destaque">
-      <header class="parallax-padrao">
-        <h2>
-          Destaques
-        </h2>
-        <h3>
-          Nossos destaques da cafeteria
-        </h3>
-      </header>
-      <div class="site card wow animate__animated animate__fadeInUp">
-
-        <!-- Primeiro destaque -->
-
-        <article>
-          <img src="{{asset('barista/img/close-up-cappuccino-table.png')}}" alt="Casa do Barista - Imagem do serviço em destaque">
-          <h5>
-            Espresso artesanal
-          </h5>
-          <h4>
-            Trabalhamos com fazendas familiares e microlotes que garantem qualidade e história.
-          </h4>
-         
-        </article>
-  
-        <!-- Segundo Destaque -->
-         
-        <article>
-
-          <img src="{{asset('barista/img/blend-cocktls-glasses-with-ice-cubes-orange-slices.png')}}" alt="Casa do Barista - Imagem do serviço em destaque">
-          <h5>
-            Coado tradicional
-          </h5>
-          <h4>
-            Desde o espresso perfeito até métodos filtrados como V60, prensa francesa e Aeropress.
-          </h4>
-          
-
-        </article>
-
-        <!-- Terceiro destaque -->
-        <article>
-          <img src="{{asset('barista/img/cafe-gourmet.png')}}" alt="Casa do Barista - Imagem do serviço em destaque">
-          <h5>
-            Prensa francesa
-          </h5>
-          <h4>
-            Encontros, estudos, trabalho, leitura ou simplesmente relaxar.
-          </h4>
-         
-
-        </article>
-        
-
+    <section class="destaque">
+      <div class="parallax-padrao wow animate__animated animate__fadeInUp">
+        <h3>Destaque</h3>
+        <h2>O que você encontra na Casa do Barista</h2>
       </div>
-      
-</section>
+      <div class="site des-cards wow animate__animated animate__fadeInUp">
+        <article>
+          <img src="{{ asset('barista/img/destaque1.png') }}" alt="Casa do Barista - Cafés especiais de origem selecionada">
+          <h4>Cafés especiais de origem selecionada</h4>
+          <h5>Trabalhamos com fazendas familiares e microlotes que garantem qualidade e história.</h5>
+        </article>
+        <article>
+          <img src="{{ asset('barista/img/destaque2.png') }}" alt="Casa do Barista - Experiências, workshops e degustações">
+          <h4>Experiências, workshops e degustações</h4>
+          <h5>Trabalhamos com fazendas familiares e microlotes que garantem qualidade e história.</h5>
+        </article>
+        <article>
+          <img src="{{ asset('barista/img/destaque3.png') }}" alt="Casa do Barista - Serviço personalizado">
+          <h4>Um serviço personalizado para você</h4>
+          <h5>Trabalhamos com fazendas familiares e microlotes que garantem qualidade e história.</h5>
+        </article>
+      </div>
+    </section>
