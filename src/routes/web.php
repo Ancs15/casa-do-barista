@@ -7,6 +7,8 @@ use App\Http\Controllers\Site\HomeController;
 use App\Http\Controllers\Site\SobreController;
 use Illuminate\Support\Facades\Route;
 
+
+//Conecta a rota da home com o controller HomeController e o método home
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/sobre', [SobreController::class, 'sobre'])->name('sobre');
 Route::get('/cardapio', [CardapioController::class, 'cardapio'])->name('cardapio');
