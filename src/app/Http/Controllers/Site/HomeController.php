@@ -7,6 +7,7 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use App\Models\Depoimento;
 use App\Models\Banner;
+use App\Models\Galeria;
 
 //Cria a classe HomeController
 class HomeController extends Controller{
@@ -30,9 +31,13 @@ class HomeController extends Controller{
 
         // dd($listaDepo->toArray()); // Retorna a variável $listaDepo para teste.
 
+        //Buscar as imagens de galeria ativas em ordem aleatória no banco e armazena na variável $listaGaleria
+        $listaGaleria = Galeria::where('status_galeria', 'ATIVO')->inRandomOrder()->get();
+
+        // dd($listaGaleria);
 
         //Carrega a view home e passa as variáveis para a view
-        return view('site.home.home', compact('listaBanner', 'listaDepo'));
+        return view('site.home.home', compact('listaBanner', 'listaDepo', 'listaGaleria'));
 
     }
 
