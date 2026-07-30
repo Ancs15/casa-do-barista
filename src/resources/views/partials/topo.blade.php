@@ -6,11 +6,34 @@
       <nav class="menu">
         <button class="fechar-menu"></button>
         <ul>
-          <li><a class="menu-ativo" href="{{ route('home') }}">Home</a></li>
-          <li><a href="{{ route('sobre') }}">Sobre</a></li>
-          <li><a href="{{ route('cardapio') }}">Cardápio</a></li>
-          <li><a href="{{ route('eventos') }}">Eventos</a></li>
-          <li><a href="{{ route('contato') }}">Contato</a></li>
+          <li>
+            <a class="menu-ativo" href="{{ route('home') }}">Home</a>
+          </li>
+          <li>
+            <a href="{{ route('sobre') }}">Sobre</a>
+          </li>
+          <li class="item-submenu">
+            <a href="{{ route('cardapio') }}">Cardápio</a>
+          
+            <!-- SUB MENU -->
+            <ul class="submenu">
+              @foreach ($categoriaMenu as $linha)
+
+                <li>
+                  <a href="{{ route('cardapio.categoria',$linha->id_categoria)}}">{{ $linha->nome_categoria }}</a>
+                </li>
+              
+              @endforeach
+            </ul>
+            <!-- FIM SUB MENU -->
+
+          </li>
+          <li>
+            <a href="{{ route('eventos') }}">Eventos</a>
+          </li>
+          <li>
+            <a href="{{ route('contato') }}">Contato</a>
+          </li>
         </ul>
 
         <div class="rede-login">

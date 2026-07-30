@@ -23,7 +23,7 @@ class Cliente extends Model{
         'status_cliente',
     ];
 
-    // Relacionamento um CLIENTE pertence a muitos DEPOIMENTOS
+    // Relacionamento um CLIENTE tem MUITOS DEPOIMENTOS
 
     //$this = classe atual, ou seja, CLIENTE
     //hasMany = tem muitos

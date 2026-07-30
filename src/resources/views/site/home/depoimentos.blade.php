@@ -22,10 +22,12 @@
 
           <article>
             <div class="estrelas">
+
               @for($i = 1; $i <= 5; $i++)
 
               <img class="{{ $i <= $estrela ? 'estrela-ativa' : 'estrela-inativa'}}" src="{{ asset('barista/img/estrela.png') }}" alt="{{ $i <= $estrela ? 'Estrela preenchida' : 'Estrela não preenchida'}}">
               @endfor
+              
             </div>
             <p>"{{ $linha->descricao_depoimento }}"</p>
             <img src="{{ asset("barista/img/" . $cliente->foto_cliente) }}" alt="{{ $cliente->nome_cliente }}">
