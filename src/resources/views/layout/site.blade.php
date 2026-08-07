@@ -5,7 +5,7 @@
     @include('partials.head')
 
 </head>
-<body>
+<body id="@yield('idBody')">
     
     <!-- inicio -->
     @include('partials.topo')

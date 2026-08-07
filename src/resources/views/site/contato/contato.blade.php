@@ -1,5 +1,7 @@
 @extends('layout.site')
 
+@section('idBody', 'pg-contato')
+
 @section('content')
 
 <!-- INÍCIO DO BANNER -->

@@ -3,12 +3,19 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-
+use App\Models\Depoimento;
 class EventosController extends Controller{
 
     public function eventos(){
 
-        return view('site.eventos.eventos');
+        $listaDepo = Depoimento::with('DepoimentoCliente')
+                            ->where('status_depoimento', 'APROVADO')
+                            ->orderByDesc('id_depoimento')
+                            ->get();
+
+        // dd($listaDepo->toArray());
+
+        return view('site.eventos.eventos', compact('listaDepo'));
 
     }
 

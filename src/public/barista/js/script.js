@@ -95,9 +95,9 @@ let menuFixoTimeout = null;
 
 window.onscroll = function() {
   var top = window.scrollY;
-  var topoFixo = this.document.getElementById("topo-fixo");
+  var topoFixo = this.document.getElementById("topoFixo");
 
-  if (top >= 1100) {
+  if (top >= 400) {
     if (menuFixoTimeout) {
       clearTimeout(menuFixoTimeout);
       menuFixoTimeout = null;

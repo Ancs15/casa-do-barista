@@ -5,8 +5,11 @@ namespace App\Http\Controllers\Site;
 
 //UTiliza o controller padrão do Laravel
 use App\Http\Controllers\Controller;
-use App\Models\Depoimento;
+
+//Importa os models a ser utilizados
 use App\Models\Banner;
+use App\Models\LinhaTempo;
+use App\Models\Depoimento;
 use App\Models\Galeria;
 
 //Cria a classe HomeController
@@ -20,6 +23,10 @@ class HomeController extends Controller{
 
         //dd($listaBanner); Retorna a variável $listaBanner para teste.
         // var_dump($listaBanner); Retorna a variável $listaBanner para teste mas menos detalhado.
+
+        //Busca os registros da linha do tempo ativos, em ordem crescente por ano
+        $listaLinhaTempo = LinhaTempo::where('status_linha_tempo', 'ATIVO')->orderBy('ano_linha_tempo', 'ASC')->get();
+        // dd($listaLinhaTempo); // Retorna a variável $listaLinhaTempo para teste
 
         //Buscar os depoimentos aprovados dos clientes junto com os dados do cliente que fez o depoimento
 
@@ -37,7 +44,7 @@ class HomeController extends Controller{
         // dd($listaGaleria);
 
         //Carrega a view home e passa as variáveis para a view
-        return view('site.home.home', compact('listaBanner', 'listaDepo', 'listaGaleria'));
+        return view('site.home.home', compact('listaBanner', 'listaDepo', 'listaGaleria', 'listaLinhaTempo'));
 
     }
 
