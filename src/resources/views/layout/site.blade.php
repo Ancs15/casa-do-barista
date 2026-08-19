@@ -2,13 +2,13 @@
 <html lang="pt-br">
 <head>
     <!-- head -->
-    @include('partials.head')
+    @include('partials.site.head')
 
 </head>
 <body id="@yield('idBody')">
     
     <!-- inicio -->
-    @include('partials.topo')
+    @include('partials.site.topo')
 
     <main>
         <!-- Area de conteúdo -->
@@ -16,9 +16,9 @@
     </main>
 
     <!-- footer -->
-    @include('partials.rodape')
+    @include('partials.site.rodape')
 
     <!-- scripts -->
-    @include('partials.script')
+    @include('partials.site.script')
 </body>
 </html>

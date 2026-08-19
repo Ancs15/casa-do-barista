@@ -1,0 +1,11 @@
+.app-sidebar{
+    background: #0b0b0b !important;
+}
+
+.sidebar-brand{
+    height: 100px;
+}
+
+.sidebar-brand .brand-link .brand-image{
+    max-height: 50px;
+}
