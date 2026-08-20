@@ -18,18 +18,18 @@
         <!--end::Sidebar Brand-->
         <!--begin::Sidebar Search-->
         <div class="sidebar-search" role="search">
-          <label for="sidebar-search-input" class="visually-hidden">Filter menu</label>
+          <label for="sidebar-search-input" class="visually-hidden">Filtrar Menu</label>
           <input
             type="search"
             id="sidebar-search-input"
             class="form-control form-control-sm"
-            placeholder="Filter menu…"
+            placeholder="Filtrar Menu…"
             autocomplete="off"
             data-lte-toggle="sidebar-search"
             data-lte-target="#navigation"
           />
           <p class="fs-7 text-secondary mt-2 mb-0" data-lte-search-empty role="status" hidden>
-            No matching pages.
+            Nenhuma página encontrada.
           </p>
         </div>
         <!--end::Sidebar Search-->
@@ -72,6 +72,7 @@
                   </li>
                 </ul>
               </li>
+              <li class="nav-header">PRODUTOS</li>
               <li class="nav-item">
                 <a href="./starter.html" class="nav-link">
                   <i class="nav-icon bi bi-file-earmark"></i>

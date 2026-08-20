@@ -2,6 +2,6 @@
 
 @section('content')
 
-  <h1>DASHBOARD</h1>
+  <h2>DASHBOARD</h2>
   
 @endsection

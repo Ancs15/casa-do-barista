@@ -1,11 +1,242 @@
+/* 
+=======================================
+FONTES IMPORTAÇÃO OU INSTALAÇÃO
+=======================================
+*/
+
+/* FONTE GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* FONTE LOCAL */
+@font-face{
+    font-family: "Geometry Soft Pro-Bold N";
+    src: url(../../barista/fonts/Geometry\ Soft\ Pro-Bold\ N.otf) format("opentype");
+    font-weight: 700;
+    font-style: normal;
+
+    /* ATENÇÃO COM O CAMINHO DA FONTE */
+
+}
+
+:root{
+    /* Toda vez que tem -- é uma variável */
+    --cor-fundo-clara: #F3E8DC;
+    --cor-fundo-escura: #2e2e2e;
+    --cor-principal: #4b2e1e;
+    --cor-secundaria-1: #8b5e3c;
+    --cor-secundaria-2: #b56a34;
+    --cor-destaque: #5c6945;
+
+    --cor-texto: #2e2e2e;
+    --cor-titulo:  #4b2e1e;
+    --cor-subtitulo: #8b5e3c;
+
+
+    /* FONTES */
+
+    --fonte-texto: "Bebas Neue", sans-serif;
+    --fonte-titulo: "Geometry Soft Pro-Bold N";
+
+    
+
+}
+
+
+
+h2{
+    font-family: var(--fonte-titulo);
+}
+
+h3{
+    font-family: var(--fonte-texto);
+}
+
+p{
+    font-family: var(--fonte-texto);
+}
+
+
+
+/* MENU LATERAL */
+
 .app-sidebar{
     background: #0b0b0b !important;
 }
+
+/* LOGO */
 
 .sidebar-brand{
     height: 100px;
 }
 
+
 .sidebar-brand .brand-link .brand-image{
-    max-height: 50px;
+    max-height: 75px;
+}
+
+/* SEARCH BAR */
+
+.form-control {
+    color: #4b2e1e;
+    background-color: #F3E8DC;
+    border: 1px solid #b56a34;
+}
+
+.form-control:focus {
+    color: #F3E8DC;
+    background-color: #4b2e1e;
+    border: 1px solid #b56a34;
+    box-shadow: var(--bs-box-shadow-inset), 
+        0 0 0 0.25rem rgba(181, 106, 52, 0.307);
+}
+
+.form-control::placeholder {
+    color: #4b2e1e;
+}
+
+.form-control:focus::placeholder {
+    color: #F3E8DC;
+}
+
+/*CATEGORIAS DO MENU LATERAL */
+
+
+    /* box padrão*/
+.sidebar-wrapper .sidebar-menu > .nav-item > .nav-link {
+    color: #F3E8DC;
+}
+
+.sidebar-wrapper .sidebar-menu > .nav-item.menu-open > .nav-link {
+    background-color: #b56a34 !important;
+}
+
+    /*box ao passar o mouse*/
+.sidebar-wrapper .sidebar-menu > .nav-item > .nav-link:hover {
+    color: #b56a34;
+    background-color: #F3E8DC !important;
+}
+
+    /*box ativa*/
+.sidebar-wrapper .sidebar-menu > .nav-item > .nav-link:focus {
+    background-color: #b56a34 !important;
+}
+
+.sidebar-wrapper .nav-header{
+    color: #b56a34;
+    font-weight: bold;
+}
+
+/* TOPO */
+
+/*
+.bg-body {
+    background-color: #4b2e1e !important;
+}
+*/
+
+.app-header {
+    border-bottom: 1px solid #b56a34;
+}
+
+/* SEARCH BAR DO TOPO*/
+
+.nav-link {
+    color: #4b2e1e;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #b56a34;
+}
+
+.btn:active,
+.btn:hover {
+    background-color: #b56a34 !important;
+}
+
+/* MENSAGENS, NOTIFICAÇÃO */
+
+.dropdown-item:hover, 
+.dropdown-item:focus {
+    background-color: #F3E8DC;
+}
+
+.dropdown-item:active {
+    background-color: #b56a34;
+}
+
+.dropdown-item-title {
+    color: #b56a34;
+    font-weight: bold;
+}
+
+.dropdown-footer, 
+.dropdown-header {
+    color: #F3E8DC;
+    background-color: #4b2e1e;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #4b2e1e;
+}
+
+/* PERFIL */
+
+.text-bg-primary {
+    background-color: #4b2e1e !important;
+}
+
+/* ESTILO GERAL DO CORPO */
+
+body {
+    color: #4b2e1e;
+}
+
+.app-main {
+    background-color: #f2f0f1;
+}
+
+/* LINK DA PÁGINA */
+
+.app-main .app-content-header .breadcrumb a {
+    color: #4b2e1e;
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #b56a34;
+}
+
+/* CARDS */
+
+.small-box {
+    color: #4b2e1e !important;
+    background-color: #F3E8DC !important;
+}
+
+.small-box .small-box-icon {
+    color: #4b2e1e;
+}
+
+.small-box > .small-box-footer {
+    background-color: #4b2e1e;
+}
+
+.small-box > .small-box-footer:hover {
+    background-color: rgba(75, 46, 30, 0.731);
+}
+
+.link-light {
+    color: #F3E8DC !important;
+}
+
+/* RODAPÉ */
+
+a {
+    color: #b56a34;
+}
+
+.app-footer {
+    color: #F3E8DC;
+    background-color: #4b2e1e;
 }
