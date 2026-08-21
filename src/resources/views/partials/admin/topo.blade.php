@@ -43,7 +43,7 @@
                 id="navbar-search-input"
                 name="q"
                 class="form-control"
-                placeholder="Search…"
+                placeholder="Buscar..."
               />
               <button class="btn btn-outline-secondary" type="submit" aria-label="Submit search">
                 <i class="bi bi-search" aria-hidden="true"></i>

@@ -253,3 +253,62 @@ a {
 .app-footer > div:first-of-type {
     color: #b56a34;
 }
+
+
+    /*******************/
+    /*******************/
+    /*   TEMA ESCURO   */
+    /* CASA DO BARISTA */
+    /*******************/
+    /*******************/
+
+[data-bs-theme="dark"] .bg-body {
+    background-color: #4b2e1e !important;
+}
+
+[data-bs-theme="dark"] .app-header .nav-link {
+    color: #F3E8DC !important;
+}
+
+[data-bs-theme="dark"] .app-header .nav-link:focus,
+[data-bs-theme="dark"] .app-header .nav-link:hover {
+    color: #b56a34 !important;
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+    background-color: #0b0b0b;
+}
+
+[data-bs-theme="dark"] .btn {
+    background-color: #F3E8DC;
+    color: #b56a34;
+}
+
+[data-bs-theme="dark"] .btn:focus,
+[data-bs-theme="dark"] .btn:hover {
+    color: #F3E8DC;
+}
+
+/*[data-bs-theme="dark"] .text-bg-primary {
+    background-color: #b56a34 !important;
+}*/
+
+[data-bs-theme="dark"] .app-main {
+    background-color: #171210;
+}
+
+[data-bs-theme="dark"] .app-main .app-content-header .breadcrumb a {
+    color: #b56a34;
+}
+
+[data-bs-theme="dark"] .breadcrumb-item.active {
+    color: #F3E8DC;
+}
+
+[data-bs-theme="dark"] .small-box {
+    background-color: #b56a34 !important;
+}
+
+[data-bs-theme="dark"] body {
+    color: #F3E8DC;
+}
