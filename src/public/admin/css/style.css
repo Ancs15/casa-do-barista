@@ -80,6 +80,7 @@ p{
     color: #4b2e1e;
     background-color: #F3E8DC;
     border: 1px solid #b56a34;
+    font-family: var(--fonte-texto);
 }
 
 .form-control:focus {
@@ -92,6 +93,7 @@ p{
 
 .form-control::placeholder {
     color: #4b2e1e;
+    font-family: var(--fonte-texto);
 }
 
 .form-control:focus::placeholder {
@@ -124,6 +126,10 @@ p{
 .sidebar-wrapper .nav-header{
     color: #b56a34;
     font-weight: bold;
+}
+
+.sidebar-wrapper .nav-header h2 {
+    font-size: 1rem;
 }
 
 /* TOPO */
@@ -205,6 +211,7 @@ body {
 
 .breadcrumb-item.active {
     color: #b56a34;
+    font-family: var(--fonte-texto);
 }
 
 /* CARDS */
@@ -234,9 +241,15 @@ body {
 
 a {
     color: #b56a34;
+    font-family: var(--fonte-texto);
 }
 
 .app-footer {
     color: #F3E8DC;
     background-color: #4b2e1e;
+    font-family: var(--fonte-texto);
+}
+
+.app-footer > div:first-of-type {
+    color: #b56a34;
 }

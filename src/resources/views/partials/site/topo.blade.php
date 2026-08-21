@@ -37,7 +37,7 @@
         </ul>
 
         <div class="rede-login">
-          <a href="#" class="login">
+          <a href="{{ route('dash') }}" class="login">
             <img src="{{ asset('barista/img/login.png') }}" alt="Login Casa do Barista">
           </a>
           <ul class="rede-social">

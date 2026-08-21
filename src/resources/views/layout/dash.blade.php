@@ -24,7 +24,7 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h2 class="mb-0 fs-3">Dashboard</h2>
+                <h2 class="mb-0 fs-3">Bem-vindo, Usuário</h2>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
