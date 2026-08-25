@@ -4,9 +4,9 @@
                 <!--begin::Small Box Widget 1-->
                 <div class="small-box text-bg-primary">
                   <div class="inner">
-                    <h3>150</h3>
+                    <h3>{{$qtdeClientes}}</h3>
 
-                    <p>New Orders</p>
+                    <p>Clientes</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -33,9 +33,9 @@
                 <!--begin::Small Box Widget 2-->
                 <div class="small-box text-bg-success">
                   <div class="inner">
-                    <h3>53<sup class="fs-5">%</sup></h3>
+                    <h3>{{$qtdeProdutos}}</h3>
 
-                    <p>Bounce Rate</p>
+                    <p>Produtos Ativos</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -62,9 +62,9 @@
                 <!--begin::Small Box Widget 3-->
                 <div class="small-box text-bg-warning">
                   <div class="inner">
-                    <h3>44</h3>
+                    <h3>{{$qtdeProdutosDestaque}}</h3>
 
-                    <p>User Registrations</p>
+                    <p>Produtos em Destaque</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -91,9 +91,9 @@
                 <!--begin::Small Box Widget 4-->
                 <div class="small-box text-bg-danger">
                   <div class="inner">
-                    <h3>65</h3>
+                    <h3>R$ {{ number_format($valorTotalVendas, 2, ',', '.') }}</h3>
 
-                    <p>Unique Visitors</p>
+                    <p>Valor total de Vendas</p>
                   </div>
                   <svg
                     class="small-box-icon"

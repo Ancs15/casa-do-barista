@@ -1,7 +1,7 @@
 @extends('layout.dash')
 
 @section('content')
+    
+    @include('admin.banner.listarBanner')
 
-  <h2>DASHBOARD</h2>
-  
 @endsection

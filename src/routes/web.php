@@ -3,6 +3,7 @@
 use App\Http\Controllers\Site\CardapioController;
 use App\Http\Controllers\Site\ContatoController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Site\EventosController;
 use App\Http\Controllers\Site\HomeController;
 use App\Http\Controllers\Site\SobreController;
@@ -29,3 +30,6 @@ Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
 
 //Conecta a rota Dash com o controller AdminControler e o método dash
 Route::get('/dashboard', [AdminController::class, 'dash'])->name('dash');
+
+
+Route::get('/admin/banners', [BannerController::class, 'index'])->name('admin.banner.index');
