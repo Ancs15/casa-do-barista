@@ -7,13 +7,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Banners</h1>
+                <h1 class="mb-0 fs-3">Vendas</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="{{ route('dash') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Banners</li>
+                    <li class="breadcrumb-item active" aria-current="page">Vendas</li>
                   </ol>
                 </nav>
               </div>
@@ -36,7 +36,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Banners cadastrados</h3>
+                        <h3 class="card-title">Vendas cadastradas</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -48,8 +48,8 @@
                               type="search"
                               id="user-search"
                               class="form-control"
-                              placeholder="Pesquisar Banners"
-                              aria-label="Pesquisar Banners"
+                              placeholder="Pesquisar Vendas"
+                              aria-label="Pesquisar Vendas"
                               style="width: 180px"
                             />
                           </div>
@@ -69,7 +69,7 @@
                             data-bs-target="#modal-add-user"
                           >
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Novo Banner
+                            Nova Venda
                           </button>
                         </div>
                       </div>
@@ -83,8 +83,10 @@
                         <thead>
                           <tr>
                             <th>Código</th>
-                            <th>Imagem</th>
-                            <th>Título</th>
+                            <th>Data & Hora</th>
+                            <th>Valor Total</th>
+                            <th>Forma de Pagamento</th>
+                            <th>Cliente</th>
                             <th>Status</th>
 
                             <th class="text-end">
@@ -93,43 +95,39 @@
                           </tr>
                         </thead>
                         <tbody>
-                          @forelse ($listaBanner as $banner)
-                              
+                          @forelse ($listaVendas as $venda)
+                            
+                          @php
+                              $cliente = $venda->vendaCliente
+                          @endphp
                           
                           <tr>
                             <td>
                               {{--ID--}}
-                              {{$banner->id_banner}}
+                              {{$venda->id_venda}}
                             </td>
-                            {{--Imagem--}}
+                            {{-- Data --}}
                             <td>
-                              @if ($banner->imagem_banner)
-                                  <img 
-                                    src="{{ asset('barista/img/' . $banner->imagem_banner) }}" 
-                                    alt="{{ $banner->titulo_banner }}"
-                                    class="rounded"
-                                    style="
-                                      width: 100px;
-                                      height: 60px;
-                                      object-fit: cover;
-                                    "
-                                  >
-                              @else
-                                  <span class="text-muted">
-                                    Sem imagem
-                                  </span>
-                              @endif
+                                {{$venda->data_hora_venda ? $venda->data_hora_venda->format('d/m/Y H:i A') : 'Data não encontrada' }}
                             </td>
-                            {{--Título--}}
+                            {{--Valor--}}
                             <td>
-                              {{$banner->titulo_banner}}
+                              R$ {{ number_format($venda->valor_total_venda, 2, ',', '.') }}
+                            </td>
+                            {{--Forma de Pagamento--}}
+                            <td>
+                              {{$venda->forma_pagamento_venda}}
+                            </td>
+                            {{--Cliente--}}
+                            <td>
+                              {{$cliente->nome_cliente}}
                             </td>
                             {{--Status--}}
                             <td>
-                              @if ($banner->status_banner === 'ATIVO')
-                                  <span class="badge text-bg-success">Ativo</span>
+                              @if ($venda->status_venda === 'FINALIZADA')
+                                  <span class="badge text-bg-success">Finalizada</span>
                               @else
-                                  <span class="badge text-bg-warning">Inativo</span>
+                                  <span class="badge text-bg-warning">Pendente</span>
                               @endif
                             </td>
                             <td class="text-end">
@@ -145,7 +143,7 @@
                                   type="button"
                                   class="btn btn-outline-danger"
                                   data-bs-toggle="modal"
-                                  data-bs-target="#modal-delete-banner"
+                                  data-bs-target="#modal-delete-venda"
                                   aria-label="Deletar"
                                 >
                                   <i class="bi bi-trash" aria-hidden="true"> </i>
@@ -160,7 +158,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhum banner cadastrado.
+                              Nenhuma venda cadastrada.
                             </td>
                           </tr>
 
@@ -174,9 +172,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de banners:
+                      Total de vendas:
                       <strong>
-                          {{ $listaBanner->count() }}
+                          {{ $listaVendas->count() }}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">

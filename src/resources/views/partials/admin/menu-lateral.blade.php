@@ -81,7 +81,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./generate/theme.html" class="nav-link">
+                <a href="{{ route('admin.categoria.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-fork-knife"></i>
                   <p>Categorias</p>
                 </a>
@@ -90,13 +90,13 @@
                 <h2>VENDAS</h2>
               </li>
               <li class="nav-item">
-                <a href="./starter.html" class="nav-link">
+                <a href="{{ route('admin.venda.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-graph-up-arrow"></i>
                   <p>Vendas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./generate/theme.html" class="nav-link">
+                <a href="{{ route('admin.cliente.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-person-fill"></i>
                   <p>Clientes</p>
                 </a>
@@ -105,7 +105,7 @@
                 <h2>SITE</h2>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.banner.index')}}" class="nav-link">
+                <a href="{{ route('admin.banner.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-image-fill"></i>
                   <p>
                     Banner
@@ -113,7 +113,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.galeria.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-camera"></i>
                   <p>
                     Galeria
@@ -122,7 +122,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.depoimento.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-star"></i>
                   <p>
                     Depoimentos
@@ -130,7 +130,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.linhaTempo.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-calendar-range"></i>
                   <p>
                     Linha do Tempo
@@ -138,7 +138,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.newsletter.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-newspaper"></i>
                   <p>
                     Newsletter

@@ -7,13 +7,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Banners</h1>
+                <h1 class="mb-0 fs-3">Galeria</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="{{ route('dash') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Banners</li>
+                    <li class="breadcrumb-item active" aria-current="page">Galeria</li>
                   </ol>
                 </nav>
               </div>
@@ -36,7 +36,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Banners cadastrados</h3>
+                        <h3 class="card-title">Imagens cadastradas</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -48,8 +48,8 @@
                               type="search"
                               id="user-search"
                               class="form-control"
-                              placeholder="Pesquisar Banners"
-                              aria-label="Pesquisar Banners"
+                              placeholder="Pesquisar imagens"
+                              aria-label="Pesquisar imagens"
                               style="width: 180px"
                             />
                           </div>
@@ -69,7 +69,7 @@
                             data-bs-target="#modal-add-user"
                           >
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Novo Banner
+                            Nova Imagem
                           </button>
                         </div>
                       </div>
@@ -93,20 +93,20 @@
                           </tr>
                         </thead>
                         <tbody>
-                          @forelse ($listaBanner as $banner)
+                          @forelse ($listaGaleria as $galeria)
                               
                           
                           <tr>
                             <td>
                               {{--ID--}}
-                              {{$banner->id_banner}}
+                              {{$galeria->id_galeria}}
                             </td>
                             {{--Imagem--}}
                             <td>
-                              @if ($banner->imagem_banner)
+                              @if ($galeria->imagem_galeria)
                                   <img 
-                                    src="{{ asset('barista/img/' . $banner->imagem_banner) }}" 
-                                    alt="{{ $banner->titulo_banner }}"
+                                    src="{{ asset('barista/img/' . $galeria->imagem_galeria) }}" 
+                                    alt="{{ $galeria->nome_galeria }}"
                                     class="rounded"
                                     style="
                                       width: 100px;
@@ -122,11 +122,11 @@
                             </td>
                             {{--Título--}}
                             <td>
-                              {{$banner->titulo_banner}}
+                              {{$galeria->nome_galeria}}
                             </td>
                             {{--Status--}}
                             <td>
-                              @if ($banner->status_banner === 'ATIVO')
+                              @if ($galeria->status_galeria === 'ATIVO')
                                   <span class="badge text-bg-success">Ativo</span>
                               @else
                                   <span class="badge text-bg-warning">Inativo</span>
@@ -145,7 +145,7 @@
                                   type="button"
                                   class="btn btn-outline-danger"
                                   data-bs-toggle="modal"
-                                  data-bs-target="#modal-delete-banner"
+                                  data-bs-target="#modal-delete-imagem"
                                   aria-label="Deletar"
                                 >
                                   <i class="bi bi-trash" aria-hidden="true"> </i>
@@ -160,7 +160,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhum banner cadastrado.
+                              Nenhuma imagem cadastrada.
                             </td>
                           </tr>
 
@@ -174,9 +174,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de banners:
+                      Total de imagens:
                       <strong>
-                          {{ $listaBanner->count() }}
+                          {{ $listaGaleria->count() }}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">

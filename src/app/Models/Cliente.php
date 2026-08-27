@@ -33,4 +33,9 @@ class Cliente extends Model{
         return $this->hasMany(Depoimento::class, 'id_cliente', 'id_cliente');
     }
 
+    // Relacionamento um CLIENTE Tem MUITAS VENDAS
+    public function ClienteVenda(){
+        return$this->hasMany(Venda::class, 'id_cliente', 'id_cliente');
+    }
+
 }
