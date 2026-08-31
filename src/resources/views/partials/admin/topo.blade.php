@@ -161,7 +161,7 @@
                 <span class="navbar-badge badge text-bg-warning">15</span>
               </a>
               <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
-                <span class="dropdown-item dropdown-header">15 Notifications</span>
+                <span class="dropdown-item dropdown-header"><p>15 NOTIFICATIONS</p></span>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">
                   <i class="bi bi-envelope me-2"></i> 4 new messages

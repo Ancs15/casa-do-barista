@@ -1,3 +1,11 @@
+    /*********************/
+    /*********************/
+    /*ÁREA ADMINISTRATIVA*/
+    /** CASA DO BARISTA **/
+    /*********************/
+    /*********************/
+
+
 /* 
 =======================================
 FONTES IMPORTAÇÃO OU INSTALAÇÃO
@@ -289,9 +297,35 @@ a {
     color: #F3E8DC;
 }
 
-/*[data-bs-theme="dark"] .text-bg-primary {
-    background-color: #b56a34 !important;
-}*/
+[data-bs-theme="dark"] .dropdown-item {
+    color: #b56a34;
+    background-color: #0b0b0b;
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover, .dropdown-item:focus {
+  background-color: #F3E8DC;
+}
+
+[data-bs-theme="dark"] .dropdown-footer, .dropdown-header {
+  background-color: #4b2e1e !important;
+}
+
+[data-bs-theme='dark'] .dropdown-item-title {
+    color: #4b2e1e !important;
+}
+
+[data-bs-theme="dark"] .dropdown-menu-lg p {
+    color: #b56a34;
+}
+
+/* 
+[data-bs-theme="dark"] .text-bg-primary {
+    background-color: #b56a34 !importany;
+} */
+
+[data-bs-theme="dark"] .text-bg-primary p {
+    color: #F3E8DC
+}
 
 [data-bs-theme="dark"] .app-main {
     background-color: #171210;
@@ -311,4 +345,197 @@ a {
 
 [data-bs-theme="dark"] body {
     color: #F3E8DC;
+}
+
+    /*******************/
+    /*******************/
+    /****   LISTAS  ****/
+    /******* CMS *******/
+    /*******************/
+    /*******************/
+
+.card {
+  box-shadow: 0 0 1px rgba(181, 106, 52, 0.42), 0 1px 3px rgba(181, 106, 52, 0.5)
+}
+
+.card-header {
+    background-color: #0b0b0b;
+}
+
+.card-title {
+    color: #F3E8DC;
+}
+
+.input-group-text {
+    color: #F3E8DC;
+    background-color: #b56a34;
+    border: 1px solid #b56a34;
+}
+
+.form-select {
+    background-color: #F3E8DC;
+    color: #b56a34;
+}
+
+.btn-primary {
+    background-color: #b56a34;
+    color: #F3E8DC;
+    border: 1px solid #b56a34;
+    box-shadow: 0 7px 5px rgba(181, 106, 52, 0.56);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    color: #b56a34 !important;
+    background-color: #F3E8DC !important;
+    border: 1px solid #F3E8DC;
+}
+
+.table thead tr > * {
+    background-color: #F3E8DC !important;
+}
+
+.table th {
+    color: #b56a34;
+}
+
+.table tbody tr:hover > * {
+    background-color: #b56a34 !important;
+}
+
+.table tbody tr:hover td {
+    color: #F3E8DC;
+}
+
+.table tbody tr .btn {
+    background-color: #Fff;
+}
+
+.table tbody tr td:last-child button:last-child {
+    background-color: red;
+    color: #F3E8DC;
+}
+
+.table tbody tr .btn:hover {
+    background-color: #4b2e1e !important;
+}
+
+.card-footer {
+    background-color: #0b0b0b;
+}
+
+.text-body-secondary {
+    color: #b56a34 !important;
+}
+
+.text-body-secondary strong {
+    color: #F3E8DC;
+}
+
+.page-item a {
+    background-color: #F3E8DC;
+    color: #b56a34;
+}
+
+.page-item a:hover {
+    background-color: #fff;
+    color: #b56a34; 
+}
+
+.page-item.active a {
+    background-color: #b56a34;
+    color: #F3E8DC;
+}
+
+
+    /*******************/
+    /*******************/
+    /*   TEMA ESCURO   */
+    /**** LISTA CMS ****/
+    /*******************/
+    /*******************/
+
+[data-bs-theme="dark"] .card-header {
+    background-color: #b56a34;
+}
+
+[data-bs-theme="dark"] .input-group-text {
+    color: #F3E8DC;
+    background-color: #4b2e1e;
+    border: 1px solid #4b2e1e;
+}
+
+[data-bs-theme="dark"] .btn-primary {
+    background-color: #4b2e1e;
+    color: #F3E8DC;
+    border: 1px solid #4b2e1e;
+    box-shadow: 0 7px 5px rgba(75, 46, 30, 0.56);
+}
+
+[data-bs-theme="dark"] .table thead tr > * {
+    background-color: #4b2e1e !important;
+}
+
+[data-bs-theme="dark"] .table th {
+    color: #F3E8DC;
+}
+
+[data-bs-theme="dark"] .table tbody tr > * {
+    background-color:  #0b0b0b !important;
+}
+
+[data-bs-theme="dark"] .table tbody tr:hover > * {
+    background-color: #4b2e1e !important;
+}
+
+[data-bs-theme="dark"] .table tbody tr td {
+    color: #F3E8DC;
+}
+
+[data-bs-theme="dark"] .table tbody tr:hover td {
+    color: #e26912;
+}
+
+[data-bs-theme="dark"] .table tbody tr .btn {
+    background-color: #Fff;
+}
+
+[data-bs-theme="dark"] .table tbody tr .btn:hover {
+    background-color: #4b2e1e !important;
+}
+
+[data-bs-theme="dark"] .table tbody tr td:last-child .btn:last-child {
+    color: #F3E8DC;
+    background-color: #4b2e1e;
+} 
+
+[data-bs-theme="dark"] .table tbody tr .btn:last-child:hover {
+    color: #b56a34;
+    background-color: red !important;
+}
+
+[data-bs-theme="dark"] .card-footer {
+    background-color: #b56a34;
+}
+
+[data-bs-theme="dark"] .text-body-secondary {
+    color: #F3E8DC !important;
+}
+
+[data-bs-theme="dark"] .text-body-secondary strong {
+    color: #4b2e1e;
+}
+
+[data-bs-theme="dark"] .page-item a {
+    background-color: #4b2e1e;
+    color: #F3E8DC;
+}
+
+[data-bs-theme="dark"] .page-item a:hover {
+    background-color: #fff;
+    color: #b56a34; 
+}
+
+[data-bs-theme="dark"] .page-item.active a {
+    background-color: #F3E8DC;
+    color: #b56a34;
 }

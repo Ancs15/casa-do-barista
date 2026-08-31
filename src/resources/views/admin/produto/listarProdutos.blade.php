@@ -142,14 +142,14 @@
                             </td>
                             {{--Valor--}}
                             <td>
-                                {{$produto->valor_produto ? $produto->valor_produto->format()}}
+                                R${{ number_format($produto->valor_produto, 2, ',', '.')}}
                             </td>
                             {{--Status--}}
                             <td>
-                              @if ($produto->status_produto === 'APROVADO')
-                                  <span class="badge text-bg-success">Aprovado</span>
+                              @if ($produto->status_produto === 'ATIVO')
+                                  <span class="badge text-bg-success">Ativo</span>
                               @else
-                                  <span class="badge text-bg-warning">Pendente</span>
+                                  <span class="badge text-bg-warning">Inativo</span>
                               @endif
                             </td>
                             <td class="text-end">
@@ -165,7 +165,7 @@
                                   type="button"
                                   class="btn btn-outline-danger"
                                   data-bs-toggle="modal"
-                                  data-bs-target="#modal-delete-depoimento"
+                                  data-bs-target="#modal-delete-produto"
                                   aria-label="Deletar"
                                 >
                                   <i class="bi bi-trash" aria-hidden="true"> </i>
@@ -180,7 +180,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhum depoimento cadastrado.
+                              Nenhum produto cadastrado.
                             </td>
                           </tr>
 
@@ -194,7 +194,7 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de depoimentos:
+                      Total de produto:
                       <strong>
                           {{ $listaProdutos->count() }}
                       </strong>

@@ -2,7 +2,7 @@
               <!--begin::Col-->
               <div class="col-lg-3 col-6">
                 <!--begin::Small Box Widget 1-->
-                <div class="small-box text-bg-primary">
+                <div class="small-box text-bg-success">
                   <div class="inner">
                     <h3>{{$qtdeClientes}}</h3>
 
@@ -91,7 +91,7 @@
                 <!--begin::Small Box Widget 4-->
                 <div class="small-box text-bg-danger">
                   <div class="inner">
-                    <h3>R$ {{ number_format($valorTotalVendas, 2, ',', '.') }}</h3>
+                    <h3>R${{ number_format($valorTotalVendas, 2, ',', '.') }}</h3>
 
                     <p>Valor total de Vendas</p>
                   </div>

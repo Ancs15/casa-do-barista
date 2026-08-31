@@ -83,7 +83,8 @@
                         <thead>
                           <tr>
                             <th>Código</th>
-                            <th>Data & Hora</th>
+                            <th>Data</th>
+                            <th>Hora</th>
                             <th>Valor Total</th>
                             <th>Forma de Pagamento</th>
                             <th>Cliente</th>
@@ -108,11 +109,15 @@
                             </td>
                             {{-- Data --}}
                             <td>
-                                {{$venda->data_hora_venda ? $venda->data_hora_venda->format('d/m/Y H:i A') : 'Data não encontrada' }}
+                                {{$venda->data_hora_venda ? $venda->data_hora_venda->format('d/m/Y') : 'Data não encontrada' }}
+                            </td>
+                            {{-- Hora --}}
+                            <td>
+                                {{$venda->data_hora_venda ? $venda->data_hora_venda->format('H:i A') : 'Hora não encontrada' }}
                             </td>
                             {{--Valor--}}
                             <td>
-                              R$ {{ number_format($venda->valor_total_venda, 2, ',', '.') }}
+                              R${{ number_format($venda->valor_total_venda, 2, ',', '.') }}
                             </td>
                             {{--Forma de Pagamento--}}
                             <td>

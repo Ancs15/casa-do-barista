@@ -75,7 +75,7 @@
                 <h2>PRODUTOS</h2>
               </li>
               <li class="nav-item">
-                <a href="./starter.html" class="nav-link">
+                <a href="{{ route('admin.produto.index')}}" class="nav-link">
                   <i class="nav-icon bi bi-cup-hot"></i>
                   <p>Produtos</p>
                 </a>
