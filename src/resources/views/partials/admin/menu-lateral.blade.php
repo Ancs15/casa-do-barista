@@ -43,8 +43,8 @@
               data-accordion="false"
               id="navigation"
             >
-              <li class="nav-item menu-open">
-                <a href="{{ route('dash') }}" class="nav-link active">
+              <li class="nav-item">
+                <a href="{{ route('dash') }}" class="nav-link {{ request()->routeIs('dash') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-window"></i>
                   <p>
                     Dashboard
@@ -75,13 +75,13 @@
                 <h2>PRODUTOS</h2>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.produto.index')}}" class="nav-link">
+                <a href="{{ route('admin.produto.index')}}" class="nav-link {{ request()->routeIs('admin.produto.index') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-cup-hot"></i>
                   <p>Produtos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.categoria.index') }}" class="nav-link">
+                <a href="{{ route('admin.categoria.index') }}" class="nav-link {{ request()->routeIs('admin.categoria.index') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-fork-knife"></i>
                   <p>Categorias</p>
                 </a>
@@ -90,13 +90,13 @@
                 <h2>VENDAS</h2>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.venda.index') }}" class="nav-link">
+                <a href="{{ route('admin.venda.index') }}" class="nav-link {{ request()->routeIs('admin.venda.index') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-graph-up-arrow"></i>
                   <p>Vendas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.cliente.index') }}" class="nav-link">
+                <a href="{{ route('admin.cliente.index') }}" class="nav-link {{ request()->routeIs('admin.cliente.index') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-person-fill"></i>
                   <p>Clientes</p>
                 </a>
@@ -105,7 +105,7 @@
                 <h2>SITE</h2>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.banner.index') }}" class="nav-link">
+                <a href="{{ route('admin.banner.index') }}" class="nav-link {{ request()->routeIs('admin.banner.index') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-image-fill"></i>
                   <p>
                     Banner
@@ -113,7 +113,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.galeria.index') }}" class="nav-link">
+                <a href="{{ route('admin.galeria.index') }}" class="nav-link {{ request()->routeIs('admin.galeria.index') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-camera"></i>
                   <p>
                     Galeria
@@ -122,7 +122,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="{{ route('admin.depoimento.index') }}" class="nav-link">
+                <a href="{{ route('admin.depoimento.index') }}" class="nav-link {{ request()->routeIs('admin.depoimento.index') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-star"></i>
                   <p>
                     Depoimentos
@@ -130,7 +130,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.linhaTempo.index') }}" class="nav-link">
+                <a href="{{ route('admin.linhaTempo.index') }}" class="nav-link {{ request()->routeIs('admin.linhaTempo.index') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-calendar-range"></i>
                   <p>
                     Linha do Tempo
@@ -138,7 +138,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.newsletter.index') }}" class="nav-link">
+                <a href="{{ route('admin.newsletter.index') }}" class="nav-link {{ request()->routeIs('admin.newsletter.index') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-newspaper"></i>
                   <p>
                     Newsletter

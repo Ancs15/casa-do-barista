@@ -58,9 +58,9 @@
                             class="form-select form-select-sm w-auto"
                             aria-label="Filter by role"
                           >
-                            <option value="all" selected>Todos</option>
-                            <option value="ativo">Ativos</option>
-                            <option value="inativo">Inativos</option>
+                            <option class="seletor" value="all" selected>Todos</option>
+                            <option class="seletor" value="ativo">Ativos</option>
+                            <option class="seletor" value="inativo">Inativos</option>
                           </select>
                           <button
                             type="button"
