@@ -138,6 +138,7 @@
                                   type="button"
                                   class="btn btn-outline-secondary"
                                   aria-label="Editar"
+                                  submit="{{ $banner->id_banner }}"
                                 >
                                   <i class="bi bi-pencil" aria-hidden="true"> </i>
                                 </button>
@@ -221,9 +222,20 @@
             >
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <form>
+                  
+                <!-- FORM DE CADASTRO -->
+                 <!-- Action serve para: definir a rota -->
+                 <!-- Method serve para: definir o método HTTP -->
+                 <!-- enctype serve para: permitir upload de arquivos -->
+                 <!-- @csrf serve para: gerar token de segurança - USAR EM TODO FORMULÁRIO -->
+                <form
+                action=" {{ route('admin.banner.store') }}"
+                method="POST"
+                enctype="multipart/form-data">
+                @csrf
+
                     <div class="modal-header">
-                      <h5 class="modal-title" id="modal-add-user-label">Add new user</h5>
+                      <h5 class="modal-title" id="modal-add-user-label">Cadastrar novo banner</h5>
                       <button
                         type="button"
                         class="btn-close"
@@ -233,52 +245,45 @@
                     </div>
                     <div class="modal-body">
                       <div class="mb-3">
-                        <label for="new-user-name" class="form-label"> Full name </label>
+                        <label for="new-banner-name" class="form-label"> Título do banner </label>
                         <input
                           type="text"
                           class="form-control"
-                          id="new-user-name"
-                          placeholder="e.g. Jane Doe"
+                          id="new-banner-name"
+                          placeholder="Ex: Promoção de Verão"
                           required
+                          name="titulo-banner"
                         />
                       </div>
                       <div class="mb-3">
-                        <label for="new-user-email" class="form-label"> Email address </label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="new-user-email"
-                          placeholder="name@example.com"
-                          required
+                        <label for="imagem_banner" class="form-label"> Selecione uma imagem </label>
+                        <input type="file" class="form-control input-banner" id="imagem_banner" name="imagem_banner"  accept="image/*" required
                         />
-                        <div class="form-text">The invitation will be sent to this address.</div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="new-user-role" class="form-label"> Role </label>
-                        <select id="new-user-role" class="form-select">
-                          <option selected>Subscriber</option>
-                          <option>Author</option>
-                          <option>Editor</option>
-                          <option>Administrator</option>
-                        </select>
-                      </div>
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="new-user-welcome"
-                          checked
-                        />
-                        <label class="form-check-label" for="new-user-welcome">
-                          Send a welcome email with login details
+                        
+                        <label for="imagem_banner" class="banner-upload">
+
+                          <img id="ver-banner" src="{{ asset('barista/img/banner/banner-vazio.svg') }}" alt="Selecione uma imagem para o banner">
+
+                          <div class="banner-upload">
+                            <i class="bi bi-image"></i>
+                            <span>Clique para selecionar o banner</span>
+                          </div>
+
                         </label>
+                      </div>
+                      <div class="mb-3">
+                        <label for="new-banner-role" class="form-label"> Status </label>
+                        <select id="new-banner-role" class="form-select" name="status-banner">
+                          <option value="ATIVO">Ativo</option>
+                          <option value="INATIVO">Inativo</option>
+                        </select>
                       </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Cancel
+                        Cancelar
                       </button>
-                      <button type="submit" class="btn btn-primary">Create user</button>
+                      <button type="submit" class="btn btn-primary">Salvar</button>
                     </div>
                   </form>
                 </div>
@@ -329,3 +334,20 @@
         <!--end::App Content-->
       </main>
       <!--end::App Main-->
+
+      <script>
+        const inputBanner = document.getElementById('imagem_banner');
+        const previewBanner = document.getElementById('ver-banner');
+    
+        inputBanner.addEventListener('change', function() {
+    
+            const arquivo = this.files[0];
+    
+            if (arquivo) {
+    
+                previewBanner.src = URL.createObjectURL(arquivo);
+    
+            }
+    
+        });
+      </script>

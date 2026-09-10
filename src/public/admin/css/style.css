@@ -242,6 +242,12 @@ body {
     color: #F3E8DC !important;
 }
 
+#ver-banner {
+    width: 100%;
+}
+
+/* MODAL BANNER */
+
 /* RODAPÉ */
 
 a {
