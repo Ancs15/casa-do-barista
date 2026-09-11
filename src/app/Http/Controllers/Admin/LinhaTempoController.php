@@ -9,9 +9,8 @@ Class LinhaTempoController extends Controller {
 
     public function index() {
 
-        $listaLinhaTempo = LinhaTempo::where('status_linha_tempo', 'ATIVO')
-                                            ->orderByDesc('id_linha_tempo')
-                                                                    ->get();
+        $listaLinhaTempo = LinhaTempo::orderByDesc('id_linha_tempo')
+                                                             ->get();
 
         return view('admin.linhaTempo.index', compact('listaLinhaTempo'));
 

@@ -10,9 +10,8 @@ Class ProdutoController extends Controller {
     public function index() {
 
         $listaProdutos = Produto::with('ProdutoCategoria')
-                        ->where('status_produto', 'ATIVO')
                                ->orderByDesc('id_produto')
-                                                  ->get();
+                                                   ->get();
         //dd($listaProdutos->toArray());
 
         return view('admin.produto.index', compact('listaProdutos'));

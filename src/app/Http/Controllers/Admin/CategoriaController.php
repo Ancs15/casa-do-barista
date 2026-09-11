@@ -9,9 +9,8 @@ Class CategoriaController extends Controller {
 
     public function index() {
 
-        $listaCategorias = Categoria::where('status_categoria', 'ATIVO')
-                                           ->orderByDesc('id_categoria')
-                                                                ->get();
+        $listaCategorias = Categoria::orderByDesc('id_categoria')
+                                                          ->get();
         //dd($listaCategorias);
 
         return view('admin.categoria.index', compact('listaCategorias'));

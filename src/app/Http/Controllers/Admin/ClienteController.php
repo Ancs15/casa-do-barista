@@ -9,9 +9,8 @@ Class ClienteController extends Controller {
 
     public function index() {
 
-        $listaClientes = Cliente::where('status_cliente', 'ATIVO')
-                                       ->orderByDesc('id_cliente')
-                                                          ->get();
+        $listaClientes = Cliente::orderByDesc('id_cliente')
+                                                    ->get();
         //dd($listaClientes);
 
         return view('admin.cliente.index', compact('listaClientes'));
