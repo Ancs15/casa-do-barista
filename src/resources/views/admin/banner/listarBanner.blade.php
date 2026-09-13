@@ -245,14 +245,14 @@
                     </div>
                     <div class="modal-body">
                       <div class="mb-3">
-                        <label for="new-banner-name" class="form-label"> Título do banner </label>
+                        <label for="titulo_banner" class="form-label"> Título do banner </label>
                         <input
                           type="text"
                           class="form-control"
                           id="new-banner-name"
                           placeholder="Ex: Promoção de Verão"
                           required
-                          name="titulo-banner"
+                          name="titulo_banner"
                         />
                       </div>
                       <div class="mb-3">
@@ -272,8 +272,8 @@
                         </label>
                       </div>
                       <div class="mb-3">
-                        <label for="new-banner-role" class="form-label"> Status </label>
-                        <select id="new-banner-role" class="form-select" name="status-banner">
+                        <label for="status_banner" class="form-label"> Status </label>
+                        <select id="new-banner-role" class="form-select" name="status_banner">
                           <option value="ATIVO">Ativo</option>
                           <option value="INATIVO">Inativo</option>
                         </select>
