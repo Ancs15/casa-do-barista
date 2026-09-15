@@ -19,6 +19,24 @@
               </div>
             </div>
             <!--end::Row-->
+
+            @if(session('sucesso')){
+              {{-- ALERTA DE SUCESSO --}}
+              <div class="alert alert-success" role="alert">
+                <i class="bi bi-check-circle-fill"></i>
+                {{ session('sucesso') }}
+              </div>
+            }
+            @elseif (session('erro')){
+              {{-- ALERTA DE ERRO --}}
+              <div class="alert alert-danger" role="alert">
+                <i class="bi bi-exclamation-circle-fill"></i>
+                {{ session('erro') }}
+              </div>
+            }
+            @endif
+
+
           </div>
           <!--end::Container-->
         </div>
