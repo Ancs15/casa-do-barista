@@ -363,6 +363,8 @@ p{
 /* banner */
 .banner img{
     width: 100%;
+    max-height: 700px;
+    background-size: cover;
 }
 
 .banner .slick-prev:before,

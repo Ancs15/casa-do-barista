@@ -43,9 +43,9 @@ Route::prefix('admin')->group( function (){
     //CRUD Banner
     Route::get('/banners', [BannerController::class, 'index'])->name('admin.banner.index'); //Listar Banners
     Route::post('/banners', [BannerController::class, 'store'])->name('admin.banner.store');
-    Route::get('/banners/{id}/editar', [BannerController::class, 'edit'])->name('admin.banner.edit'); //Abrir banner para edição
-    Route::put('/banners/{id}', [BannerController::class, 'update'])->name('admin.banner.update');
-    Route::patch('/banners/{id}/status', [BannerController::class, 'status'])->name('admin.banner.status');
+    // Route::get('/banners/{id}/editar', [BannerController::class, 'edit'])->name('admin.banner.edit'); //Abrir banner para edição EM OUTRA PÁGINA
+    Route::put('/banners/{id}', [BannerController::class, 'update'])->name('admin.banner.update'); // Abrir banner para edição NA MESMA PÁGINA
+    Route::patch('/banners/{id}', [BannerController::class, 'status'])->name('admin.banner.status');
 
     //CRUD CATEGORIA
     Route::get('/categorias', [CategoriaController::class, 'index'])->name('admin.categoria.index');
