@@ -20,20 +20,18 @@
             </div>
             <!--end::Row-->
 
-            @if(session('sucesso')){
+            @if(session('sucesso'))
               {{-- ALERTA DE SUCESSO --}}
               <div class="alert alert-success" role="alert">
                 <i class="bi bi-check-circle-fill"></i>
                 {{ session('sucesso') }}
               </div>
-            }
-            @elseif (session('erro')){
+            @elseif (session('erro'))
               {{-- ALERTA DE ERRO --}}
               <div class="alert alert-danger" role="alert">
                 <i class="bi bi-exclamation-circle-fill"></i>
                 {{ session('erro') }}
               </div>
-            }
             @endif
 
 
@@ -175,15 +173,47 @@
                                 </button>
 
                                 <!-- ATIVAR / DESATIVAR -->
-                                <button
-                                  type="button"
-                                  class="btn btn-outline-danger"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#modal-delete-banner"
-                                  aria-label="Deletar"
+                                <form 
+                                  action="{{route('admin.banner.status', $banner->id_banner)}}"
+                                  method="POST"
+                                  class="d-inline"
                                 >
-                                  <i class="bi bi-trash" aria-hidden="true"> </i>
-                                </button>
+                                  @csrf
+                                  @method('PATCH')
+
+                                  @if($banner->status_banner === 'ATIVO')
+                                    <button
+                                    type="submit"
+                                    class="btn btn-outline-danger"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modal-status-banner"
+                                    title="Desativar banner"
+                                    data-url="{{route('admin.banner.status', $banner->id_banner)}}"
+                                    data-titulo="{{ $banner->titulo_banner }}"
+                                    data-status="ATIVO"
+                                    aria-label="Deletar"
+                                    >
+                                      <i class="bi bi-eye-fill" aria-hidden="true"> </i>
+                                    </button>
+                                  @else
+                                    <button
+                                    type="submit"
+                                    class="btn btn-outline-success"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modal-status-banner"
+                                    title="Desativar banner"
+                                    data-url="{{route('admin.banner.status', $banner->id_banner)}}"
+                                    data-titulo="{{ $banner->titulo_banner }}"
+                                    data-status="INATIVO"
+                                    aria-label="Deletar"
+                                    >
+                                      <i class="bi bi-eye-slash-fill" aria-hidden="true"> </i>
+                                    </button>
+                                  @endif
+
+                                </form>
+                              
+                                <!-- FIM ATIVAR / DESATIVAR -->
                               </div>
                             </td>
                           </tr>
@@ -245,7 +275,7 @@
             </div>
             <!--end::Row-->
 
-            <!--begin::Add User Modal-->
+            <!--INÍCIO - MODAL CADASTRO BANNER-->
             <div
               class="modal fade"
               id="modal-add-user"
@@ -322,7 +352,7 @@
                 </div>
               </div>
             </div>
-            <!--end::Add User Modal-->
+            <!-- FIM - MODAL CADASTRO BANNER -->
 
             <!-- MODAL EDITAR BANNER -->
 
@@ -368,10 +398,10 @@
                       <div class="mb-3">
                         <label for="edit-banner-imagem" class="form-label"> Selecione uma imagem </label>
                         
-                        <input type="file" class="form-control input-banner" id="edit-banner-imagem" name="imagem_banner"  accept="image/*" required
+                        <input type="file" class="form-control input-banner" id="edit-banner-imagem" name="imagem_banner"  accept="image/*"
                         />
                         
-                        <label for="imagem_banner" class="banner-upload">
+                        <label for="edit-banner-imagem" class="banner-upload">
 
                           <img id="edit-banner-mostrar" src="" alt="banner">
 
@@ -408,36 +438,44 @@
             <!--begin::Delete User Modal-->
             <div
               class="modal fade"
-              id="modal-delete-user"
+              id="modal-status-banner"
               tabindex="-1"
-              aria-labelledby="modal-delete-user-label"
+              aria-labelledby="modal-status-banner-label"
               aria-hidden="true"
             >
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="modal-delete-user-label">Delete user</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="mb-0">
-                      Are you sure you want to delete this user? All content owned by the account
-                      will be reassigned to the site administrator. This action cannot be undone.
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                      Cancel
-                    </button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                      Delete user
-                    </button>
-                  </div>
+
+                  <form id="form-status-banner" method="POST">
+                    @csrf
+                    @method('PATCH')
+
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modal-status-banner-titulo">Alterar status do banner</h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+
+                    <div class="modal-body">
+                      <p class="mb-0" id="modal-status-banner-txt">
+                        Tem certeza de que deseja alterar o status do banner? <br>
+                      </p>
+                    </div>
+                    
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancelar
+                      </button>
+                      <button type="submit" class="btn btn-danger" data-bs-dismiss="modal" id="btn-status-banner">
+                        Confirmar
+                      </button>
+                    </div>
+
+                  </form>
                 </div>
               </div>
             </div>
@@ -468,12 +506,13 @@
         });
       </script>
 
+      <!-- Editar Banner -->
       <script>
         // document = seleciona dentro de todo o site
         // getElementBy ID = seleciona um ID específico dentro do site
         const modalEditarBanner = document.getElementById('modal-edit-banner');
         const formEditBanner    = document.getElementById('form-edit-banner');
-        const editId            = document.getElementById('edit-banner-id');
+        // const editId            = document.getElementById('edit-banner-id');
         const editTitulo        = document.getElementById('edit-banner-titulo');
         const editStatus        = document.getElementById('edit-banner-status');
         const editImagem        = document.getElementById('edit-banner-imagem');
@@ -498,8 +537,6 @@
           editStatus.value = status;
           editMostrar.src  = imagem;
 
-          console.log(editMostrar.src);
-
           // Imagem vem vazia
           editImagem.value = '';
 
@@ -518,5 +555,67 @@
     
         });
 
+
+      </script>
+
+      <!-- Ativar e Desativar Banner -->
+      <script>
+
+        // Mapeia os CAMPOS do Modal
+        const modalStatusBanner   = document.getElementById('modal-status-banner');
+        const formStatusBanner    = document.getElementById('form-status-banner');
+        const tituloStatusBanner  = document.getElementById('modal-status-banner-titulo');
+        const txtStatusBanner     = document.getElementById('modal-status-banner-txt');
+        const btnStatusBanner     = document.getElementById('btn-status-banner');
+
+
+        // Dispara o evento quando o MODAL for ATIVADO com as informações do BOTÃO
+        modalStatusBanner.addEventListener('show.bs.modal', function(event){
+
+
+          const botao = event.relatedTarget;
+
+          const url       = botao.getAttribute('data-url');
+          const titulo    = botao.getAttribute('data-titulo');
+          const status    = botao.getAttribute('data-status');
+
+          formStatusBanner.action = url;
+
+          if(status === 'ATIVO'){
+
+            tituloStatusBanner.textContent = 'Desativar Status Banner';
+            txtStatusBanner.textContent = 'Tem certeza que deseja desativar o status do banner?';
+            btnStatusBanner.textContent = 'Desativar';
+
+            btnStatusBanner.className = 'btn btn-warning';
+
+          }else{
+
+            tituloStatusBanner.textContent = 'Ativar Status Banner';
+            txtStatusBanner.textContent = 'Tem certeza que deseja ativar o status do banner?';
+            btnStatusBanner.textContent = 'Ativar';
+
+            btnStatusBanner.className = 'btn btn-success';
+          };
+
+        });
+        
+      </script>
+
+      <!-- Time para o alerta -->
+      <script>
+
+        setTimeout(() => {
+          
+          const alertas = document.querySelectorAll('.alert');
+
+          alertas.forEach(function(alerta){
+            const instancia = bootstrap.Alert.getOrCreateInstance(alerta);
+
+            instancia.close();
+
+          })
+
+        }, 5000);
 
       </script>

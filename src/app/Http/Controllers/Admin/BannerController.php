@@ -117,13 +117,13 @@ Class BannerController extends Controller {
             //Titulo obrigatório, max 50 caracteres
             'titulo_banner' => 'required|max:50',
             //Imagem obrigatória e tem que ser reconhecida como arquivo de imagem
-            'imagem_banner' => 'required|image|mimes:jpg,png,webp,jpeg|max:4096',
+            'imagem_banner' => 'nullable|image|mimes:jpg,png,webp,jpeg|max:4096',
             //status é obrigatório
             'status_banner' => 'required|in:ATIVO,INATIVO'
         ]);
 
         // 2 - Buscar o banner
-        $banner = Banner::findOrFall($id);
+        $banner = Banner::findOrFail($id);
 
         try{
 
@@ -137,16 +137,19 @@ Class BannerController extends Controller {
             $caminhoArquivo = $banner->imagem_banner;
 
             // Caminho físico da imagem atual
-            $imgAntiga = public_path('barista/img/') . $banner->imagem_banner;
+            $imgAntiga = public_path('barista/img/' . $banner->imagem_banner);
 
             // CASO 1: NOVA IMAGEM
             if($request->hasFile('imagem_banner')){
                 
-                $imagem = $request->file();
+                
+                $imagem = $request->file('imagem_banner');
             
                 $extensao = strtolower($imagem->getClientOriginalExtension());
+                
 
-                $nomeImg = $tituloSlug . '_' . $banner->id_banner . '.' . $extensao;
+                $nomeImg = $tituloSlug . '_' . 
+                $banner->id_banner . '.' . $extensao;
 
                 // Excluir a imagem anterior
                 if(file_exists($imgAntiga)) {
@@ -156,10 +159,11 @@ Class BannerController extends Controller {
                 // Salva a nova imagem
                 $imagem->move($pasta, $nomeImg);
 
+
                 $caminhoArquivo = 'banner/' . $nomeImg;
             }elseif($banner->titulo_banner !== $request->titulo_banner){
                 // CASO 2 - Mudou somente o nome
-                $extensao = pathinfo($banner->titulo_banner, PATHINFO_EXTENSION);
+                $extensao = pathinfo($banner->imagem_banner, PATHINFO_EXTENSION);
 
                 $nomeImg = $tituloSlug . '_' . $banner->id_banner . '.' . $extensao;
 
@@ -187,7 +191,7 @@ Class BannerController extends Controller {
             // 11 - Voltar para a listagem e exibir uma imagem de sucesso ou erro
             return redirect()
                 ->route('admin.banner.index')
-                ->with('sucesso', 'Banner: ' . $banner->titulo_banner . 'foi atualizado com sucesso!');
+                ->with('sucesso', 'Banner: ' . $banner->titulo_banner . ' foi atualizado com sucesso!');
 
         }catch(\Throwable $erro){
 
@@ -195,7 +199,7 @@ Class BannerController extends Controller {
 
             return redirect()
                 ->back()
-                ->with('erro', 'Não foi possível atualizar o banner. Tente novamente mais tarde!');
+                ->with('erro', ' Não foi possível atualizar o banner. Tente novamente mais tarde!');
 
         }
 
@@ -207,7 +211,7 @@ Class BannerController extends Controller {
         try {
 
             // 2 - Buscar o banner
-            $banner = Banner::findOrFall($id);
+            $banner = Banner::findOrFail($id);
 
             $novoStatus = $banner->status_banner === 'ATIVO' ? 'INATIVO' : 'ATIVO';
 
@@ -216,7 +220,7 @@ Class BannerController extends Controller {
                 'status_banner' => $novoStatus,
             ]);
 
-            $mensagem = $novoStatus === 'ATIVO' ? 'Banner ativado com sucesso' : 'Banner desativado com sucesso';
+            $mensagem = $novoStatus === 'ATIVO' ? 'Banner ativado com sucesso' : ' Banner desativado com sucesso';
 
             // 11 - Voltar para a listagem e exibir uma imagem de sucesso ou erro
             return redirect()
@@ -229,7 +233,7 @@ Class BannerController extends Controller {
 
             return redirect()
                 ->back()
-                ->with('erro', 'Não foi possível alterar o status do banner. Tente novamente mais tarde!');
+                ->with('erro', ' Não foi possível alterar o status do banner. Tente novamente mais tarde!');
 
         }
 
