@@ -12,7 +12,7 @@ Class Categoria extends Model{
     public $timestamps = true;
 
     const CREATED_AT = 'data_criacao_categoria';
-    const UPDATE_AT = 'data_atualizacao_categoria';
+    const UPDATED_AT = 'data_atualizacao_categoria';
 
     protected $fillable = [
         'nome_categoria',

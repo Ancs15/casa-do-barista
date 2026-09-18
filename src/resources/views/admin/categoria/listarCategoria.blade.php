@@ -19,6 +19,20 @@
               </div>
             </div>
             <!--end::Row-->
+
+            @if(session('sucesso'))
+              {{-- ALERTA DE SUCESSO --}}
+              <div class="alert alert-success" role="alert">
+                <i class="bi bi-check-circle-fill"></i>
+                {{ session('sucesso') }}
+              </div>
+            @elseif (session('erro'))
+              {{-- ALERTA DE ERRO --}}
+              <div class="alert alert-danger" role="alert">
+                <i class="bi bi-exclamation-circle-fill"></i>
+                {{ session('erro') }}
+              </div>
+            @endif
           </div>
           <!--end::Container-->
         </div>
@@ -117,19 +131,55 @@
                                 <button
                                   type="button"
                                   class="btn btn-outline-secondary"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-edit-categoria"
+                                  data-id="{{ $categoria->id_categoria }}"
+                                  data-nome="{{ $categoria->nome_categoria }}"
+                                  data-status="{{ $categoria->status_categoria }}"
+                                  data-url="{{ route('admin.categoria.update', $categoria->id_categoria) }}"
                                   aria-label="Editar"
                                 >
                                   <i class="bi bi-pencil" aria-hidden="true"> </i>
                                 </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-outline-danger"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#modal-delete-categoria"
-                                  aria-label="Deletar"
+                                <form 
+                                  action="{{ route('admin.categoria.status', $categoria->id_categoria) }}" 
+                                  method="POST" 
+                                  class="d-inline"
                                 >
-                                  <i class="bi bi-trash" aria-hidden="true"> </i>
-                                </button>
+                                @csrf
+                                @method('PATCH')
+
+
+                                  @if( $categoria->status_categoria === 'ATIVO')
+                                  <button
+                                    type="button"
+                                    class="btn btn-outline-danger"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modal-status-categoria"
+                                    title="Desativar categoria"
+                                    data-nome="{{ $categoria->nome_categoria }}"
+                                    data-status="{{ $categoria->status_categoria }}"
+                                    data-url="{{ route('admin.categoria.status', $categoria->id_categoria) }}"
+                                    aria-label="Deletar"
+                                  >
+                                    <i class="bi bi-eye-fill" aria-hidden="true"> </i>
+                                  </button>
+                                  @else
+                                  <button
+                                    type="button"
+                                    class="btn btn-outline-success"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modal-status-categoria"
+                                    title="Ativar categoria"
+                                    data-nome="{{ $categoria->nome_categoria }}"
+                                    data-status="{{ $categoria->status_categoria }}"
+                                    data-url="{{ route('admin.categoria.status', $categoria->id_categoria) }}"
+                                    aria-label="Deletar"
+                                  >
+                                    <i class="bi bi-eye-slash-fill" aria-hidden="true"> </i>
+                                  </button>
+                                  @endif
+                                </form>
                               </div>
                             </td>
                           </tr>
@@ -140,7 +190,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhum categoria cadastrado.
+                              Nenhuma categoria cadastrada.
                             </td>
                           </tr>
 
@@ -191,7 +241,7 @@
             </div>
             <!--end::Row-->
 
-            <!--begin::Add User Modal-->
+            <!--INÍCIO - MODAL CADASTRO CATEGORIA -->
             <div
               class="modal fade"
               id="modal-add-user"
@@ -201,9 +251,13 @@
             >
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <form>
+                  <form
+                    action="{{ route('admin.categoria.store') }}"
+                    method="POST"
+                  >
+                  @csrf
                     <div class="modal-header">
-                      <h5 class="modal-title" id="modal-add-user-label">Add new user</h5>
+                      <h5 class="modal-title" id="modal-add-user-label">Adicionar nova categoria</h5>
                       <button
                         type="button"
                         class="btn-close"
@@ -213,99 +267,230 @@
                     </div>
                     <div class="modal-body">
                       <div class="mb-3">
-                        <label for="new-user-name" class="form-label"> Full name </label>
+                        <label for="nome_categoria" class="form-label"> Nome da categoria </label>
                         <input
                           type="text"
                           class="form-control"
                           id="new-user-name"
-                          placeholder="e.g. Jane Doe"
+                          placeholder="EX: Bebidas"
                           required
+                          name="nome_categoria"
                         />
                       </div>
                       <div class="mb-3">
-                        <label for="new-user-email" class="form-label"> Email address </label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="new-user-email"
-                          placeholder="name@example.com"
-                          required
-                        />
-                        <div class="form-text">The invitation will be sent to this address.</div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="new-user-role" class="form-label"> Role </label>
-                        <select id="new-user-role" class="form-select">
-                          <option selected>Subscriber</option>
-                          <option>Author</option>
-                          <option>Editor</option>
-                          <option>Administrator</option>
+                        <label for="status_categoria" class="form-label"> Status: </label>
+                        <select id="new-user-role" class="form-select" name="status_categoria">
+                          <option value="ATIVO">Ativo</option>
+                          <option value="INATIVO">Inativo</option>
                         </select>
-                      </div>
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="new-user-welcome"
-                          checked
-                        />
-                        <label class="form-check-label" for="new-user-welcome">
-                          Send a welcome email with login details
-                        </label>
                       </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Cancel
+                        Cancelar
                       </button>
-                      <button type="submit" class="btn btn-primary">Create user</button>
+                      <button type="submit" class="btn btn-primary">Salvar</button>
                     </div>
                   </form>
                 </div>
               </div>
             </div>
-            <!--end::Add User Modal-->
+            <!-- FIM - MODAL CADASTRO CATEGORIA -->
 
-            <!--begin::Delete User Modal-->
+            <!-- INÍCIO - MODAL EDITAR CATEGORIA -->
+
             <div
               class="modal fade"
-              id="modal-delete-user"
+              id="modal-edit-categoria"
               tabindex="-1"
-              aria-labelledby="modal-delete-user-label"
+              aria-labelledby="modal-edit-categoria-label"
               aria-hidden="true"
             >
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="modal-delete-user-label">Delete user</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="mb-0">
-                      Are you sure you want to delete this user? All content owned by the account
-                      will be reassigned to the site administrator. This action cannot be undone.
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                      Cancel
-                    </button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                      Delete user
-                    </button>
-                  </div>
+                  <form
+                    id="form-edit-categoria"
+                    method="POST"
+                  >
+                  @csrf
+                  @method('PUT')
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modal-add-user-label">Editar categoria</h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="edit_nome_categoria" class="form-label"> Nome da categoria </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="edit_nome_categoria"
+                          required
+                          name="nome_categoria"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="edit_status_categoria" class="form-label"> Status: </label>
+                        <select id="edit_status_categoria" class="form-select" name="status_categoria">
+                          <option value="ATIVO">Ativo</option>
+                          <option value="INATIVO">Inativo</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancelar
+                      </button>
+                      <button type="submit" class="btn btn-primary">Atualizar</button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <!--end::Delete User Modal-->
+
+             <!-- FIM - MODAL EDITAR CATEGORIA -->
+
+            <!--INÍCIO - MODAL ATIVAR/DESATIVAR CATEGORIA -->
+            <div
+              class="modal fade"
+              id="modal-status-categoria"
+              tabindex="-1"
+              aria-labelledby="modal-status-categoria-label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <form 
+                    id="form-status-categoria"
+                    method="POST"
+                  >
+                  @csrf
+                  @method('PATCH')
+
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modal-status-categoria-titulo">Alterar Status</h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="mb-0" id="modal-status-categoria-txt">
+                        Você tem certeza de que deseja alterar o status desta categoria?
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancelar
+                      </button>
+                      <button type="submit" class="btn btn-danger" data-bs-dismiss="modal" id="btn-status-categoria">
+                        Alterar Status
+                      </button>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!--FIM - MODAL ATIVAR/DESATIVAR CATEGORIA -->
           </div>
           <!--end::Container-->
         </div>
         <!--end::App Content-->
       </main>
       <!--end::App Main-->
+
+      <!-- Script editar categoria -->
+      <script>
+
+        const modalEditarCategoria  = document.getElementById('modal-edit-categoria');
+        const formEditarCategoria   = document.getElementById('form-edit-categoria');
+        const editNome              = document.getElementById('edit_nome_categoria');
+        const editStatus            = document.getElementById('edit_status_categoria');
+
+        modalEditarCategoria.addEventListener('show.bs.modal', function(event){
+
+          const botao = event.relatedTarget;
+
+          const id      = botao.getAttribute('data-id');
+          const nome    = botao.getAttribute('data-nome');
+          const status  = botao.getAttribute('data-status');
+          const url     = botao.getAttribute('data-url');
+
+          formEditarCategoria.action = url;
+
+          editNome.value = nome;
+          editStatus.value = status;
+
+
+        });
+
+      </script>
+      <!-- Fim script editar categoria -->
+
+      <!-- Script ativar/desativar categoria -->
+      <script>
+
+        const modalStatusCategoria = document.getElementById('modal-status-categoria');
+        const formStatusCategoria = document.getElementById('form-status-categoria');
+        const btnStatusCategoria = document.getElementById('btn-status-categoria');
+        const StatusCategoriaTitulo = document.getElementById('modal-status-categoria-titulo');
+        const StatusCategoriaTxt = document.getElementById('modal-status-categoria-txt');
+
+        modalStatusCategoria.addEventListener('show.bs.modal', function(event){
+
+          const botao = event.relatedTarget;
+
+          const nome = botao.getAttribute('data-nome');
+          const status = botao.getAttribute('data-status');
+          const url = botao.getAttribute('data-url');
+
+          formStatusCategoria.action = url;
+
+          if(status === 'ATIVO'){
+
+            StatusCategoriaTitulo.textContent = 'Desativar Categoria';
+            StatusCategoriaTxt.textContent = 'Você tem certeza de que deseja desativar a categoria?'
+            btnStatusCategoria.textContent = 'Desativar';
+
+            btnStatusCategoria.className = 'btn btn-warning';
+
+          } else {
+
+            StatusCategoriaTitulo.textContent = 'Ativar Categoria';
+            StatusCategoriaTxt.textContent = 'Você tem certeza de que deseja ativar a categoria?'
+            btnStatusCategoria.textContent = 'Ativar';
+
+            btnStatusCategoria.className = 'btn btn-success';
+
+          }
+
+        });
+
+      </script>
+      <!-- Fim script ativar/desativar categoria -->
+
+      <!-- Timer do aviso -->
+      <script>
+
+        setTimeout(() => {
+          
+          const alertas = document.querySelectorAll('.alert');
+          alertas.forEach(alerta => {
+
+            const instancia = bootstrap.Alert.getOrCreateInstance(alerta);
+
+            instancia.close();
+
+          })
+
+        }, 5000);
+
+      </script>

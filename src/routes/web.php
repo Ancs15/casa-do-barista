@@ -49,6 +49,10 @@ Route::prefix('admin')->group( function (){
 
     //CRUD CATEGORIA
     Route::get('/categorias', [CategoriaController::class, 'index'])->name('admin.categoria.index');
+    Route::post('/categorias', [CategoriaController::class, 'store'])->name('admin.categoria.store');
+    Route::put('/categorias/{id}', [CategoriaController::class, 'update'])->name('admin.categoria.update');
+    Route::patch('/categorias/{id}', [CategoriaController::class, 'status'])->name('admin.categoria.status');
+    
     //CRUD GALERIA
     Route::get('/galeria', [GaleriaController::class, 'index'])->name('admin.galeria.index');
     //CRUD LINHA DO TEMPO

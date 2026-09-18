@@ -38,7 +38,6 @@ Class BannerController extends Controller {
         $caminhoArquivo = null;
 
         try{
-
             DB::beginTransaction();
 
             // 2 - Cadastrar no banco de dados
