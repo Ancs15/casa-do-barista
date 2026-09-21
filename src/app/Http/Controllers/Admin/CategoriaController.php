@@ -11,12 +11,10 @@ use Illuminate\Support\Facades\DB;
 Class CategoriaController extends Controller {
 
     //CRUD CATEGORIA: R
-
     public function index() {
 
         $listaCategorias = Categoria::orderByDesc('id_categoria')
                                                           ->get();
-        //dd($listaCategorias);
 
         return view('admin.categoria.index', compact('listaCategorias'));
 
