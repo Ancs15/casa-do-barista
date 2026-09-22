@@ -195,4 +195,36 @@ Class GaleriaController extends Controller {
         }
 
     } // FIM DO MÉTODO UPDATE
+
+    //CRUD GALERIA: D (U)
+    public function status(Request $request, int $id) {
+        
+        $galeria = Galeria::findOrFail($id);
+
+        try{
+
+            $novoStatus = $galeria->status_galeria === 'ATIVO' ? 'INATIVO' : 'ATIVO';
+
+            $galeria->update([
+                'status_galeria' => $novoStatus
+            ]);
+
+            $mensagem = $novoStatus === 'ATIVO' ? 'IMAGEM: ' . $galeria->nome_galeria . ' foi ATIVADA com sucesso!' :
+            'IMAGEM: ' . $galeria->nome_galeria . ' foi DESATIVADA com sucesso!';
+
+            return redirect()
+                ->route('admin.galeria.index')
+                ->with('sucesso', $mensagem);
+
+        }catch(\Throwable $erro){
+            
+            report($erro);
+
+            return redirect()
+                ->back()
+                ->with('erro', 'Não foi possível atualizar a imagem. Tente novamente mais tarde! ' . $erro->getMessage());
+
+        }
+
+    }
 }
