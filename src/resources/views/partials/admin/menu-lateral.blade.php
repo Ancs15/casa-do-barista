@@ -44,7 +44,7 @@
               id="navigation"
             >
               <li class="nav-item">
-                <a href="{{ route('dash') }}" class="nav-link {{ request()->routeIs('dash') ? 'active' : '' }}">
+                <a href="{{ route('dashboard') }}" class="nav-link {{ request()->routeIs('dash') ? 'active' : '' }}">
                   <i class="nav-icon bi bi-window"></i>
                   <p>
                     Dashboard
